@@ -19,8 +19,8 @@ A game framework with 2D and 3D capabilities
 
 ## Build
 this project uses meson as build system, to build do the following:
-> cd ./build
-> meson compile
+        cd ./build
+        meson compile
 Meson will download all required libraries and compile, then run the example with:
-> ./src/example/Example
+        ./src/example/Example
 if everything went well, you will see a white place with an approaching image rotating
