@@ -27,4 +27,4 @@ Meson will download all required libraries and compile, then run the example wit
 
         ./src/example/Example
 
-if everything went well, you will see a white place with an approaching image rotating
+if everything went well, you will see a white place with a rotating image approaching
