@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${default}",
+                "${workspaceFolder}/src/*",
+                "${workspaceFolder}/src/core/*",
+                "${workspaceFolder}/src/core/gl",
+                "${workspaceFolder}/src/core/system",
+                "${workspaceFolder}/src/core/graphics",
+                "${workspaceFolder}/src/example/*",
+                "${workspaceFolder}/subprojects/*",
+                "${workspaceFolder}/subprojects/imgui-1.87"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": false,
+                "path": [
+                    "${default}",
+                    "${workspaceFolder}/src/*"
+                ]
+
+            },
+            "defines": [],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "linux-gcc-x64",
+            "configurationProvider": "ms-vscode.makefile-tools",
+            "compilerArgs": []
+        }
+    ],
+    "version": 4
+}

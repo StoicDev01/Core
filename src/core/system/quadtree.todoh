@@ -1,0 +1,44 @@
+#pragma once
+#include "object.h"
+#include "transform.h"
+
+// The main quadtree class
+class QuadTree
+{
+    // Hold details of the boundary of this node
+    core::Vector2i topLeft;
+    core::Vector2i botRight;
+  
+    // Contains details of node
+    core::Object *n;
+  
+    // Children of this tree
+    QuadTree *topLeftTree;
+    QuadTree *topRightTree;
+    QuadTree *botLeftTree;
+    QuadTree *botRightTree;
+
+  
+public:
+    QuadTree();
+    QuadTree(core::Vector2i topL, core::Vector2i botR);
+
+
+    // Insert a node into the quadtree
+    void insert(core::Object *node);
+
+    struct search_result{
+        core::Object* node;
+        QuadTree* tree;
+        bool succes;
+    };
+
+    // Find a node in a quadtree
+    search_result search(core::Vector2i p);
+
+    // Check if current quadtree contains the point
+    bool inBoundary(core::Vector2i p);
+    // remove current node
+    void remove_node();
+    std::vector<core::Object*> get_all_nodes();
+};

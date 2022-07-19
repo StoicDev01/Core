@@ -1,0 +1,190 @@
+#include "quadtree.h"
+
+QuadTree::QuadTree()
+{
+    topLeft = core::Vector2i(0, 0);
+    botRight = core::Vector2i(0, 0);
+    n = NULL;
+    topLeftTree  = NULL;
+    topRightTree = NULL;
+    botLeftTree  = NULL;
+    botRightTree = NULL;
+}
+
+QuadTree::QuadTree(core::Vector2i topL, core::Vector2i botR)
+{
+    n = NULL;
+    topLeftTree  = NULL;
+    topRightTree = NULL;
+    botLeftTree  = NULL;
+    botRightTree = NULL;
+    topLeft = topL;
+    botRight = botR;
+}
+
+void QuadTree::insert(core::Object *node)
+{
+    if (node == NULL)
+        return;
+                    
+    // Current quad cannot contain it
+    if (!inBoundary(node->position_grid))
+        return;
+
+    // We are at a quad of unit area
+    // We cannot subdivide this quad further
+    if (abs(topLeft.x - botRight.x) <= 1 &&
+        abs(topLeft.y - botRight.y) <= 1)
+    {
+
+        if (n == NULL)
+            n = node;
+        return;
+    }
+
+    if ((topLeft.x + botRight.x) / 2 >= node->position_grid.x)
+    {
+        // Indicates topLeftTree
+        if ((topLeft.y + botRight.y) / 2 >= node->position_grid.y)
+        {
+            if (topLeftTree == NULL)
+                topLeftTree = new QuadTree(
+                    sf::Vector2i(topLeft.x, topLeft.y),
+                    sf::Vector2i((topLeft.x + botRight.x) / 2, (topLeft.y + botRight.y) / 2
+                ));
+
+            topLeftTree->insert(node);
+        }
+
+        // Indicates botLeftTree
+        else
+        {
+            if (botLeftTree == NULL)
+                botLeftTree = new QuadTree(
+                    sf::Vector2i(topLeft.x, (topLeft.y + botRight.y) / 2),
+                    sf::Vector2i((topLeft.x + botRight.x) / 2, botRight.y)
+                );
+
+        
+            botLeftTree->insert(node);
+        }
+    }
+    else
+    {
+        // Indicates topRightTree
+        if ((topLeft.y + botRight.y) / 2 >= node->position_grid.y)
+        {
+            if (topRightTree == NULL)
+                topRightTree = new QuadTree(
+                    sf::Vector2i((topLeft.x + botRight.x) / 2, topLeft.y),
+                    sf::Vector2i(botRight.x, (topLeft.y + botRight.y) / 2));
+
+            topRightTree->insert(node);
+        }
+
+        // Indicates botRightTree
+        else
+        {
+            if (botRightTree == NULL)
+                botRightTree = new QuadTree(
+                    sf::Vector2i((topLeft.x + botRight.x) / 2, (topLeft.y + botRight.y) / 2),
+                    sf::Vector2i(botRight.x, botRight.y));
+            
+            botRightTree->insert(node);
+        }
+    }
+}
+
+// Find a node in a quadtree
+QuadTree::search_result QuadTree::search(core::Vector2i p)
+{
+    // Current quad cannot contain it
+    if (!inBoundary(p))
+        return search_result{NULL,this, false};
+
+    // We are at a quad of unit length
+    // We cannot subdivide this quad further
+    if (n != NULL)
+        return search_result{n,this, true};
+    
+
+    if ((topLeft.x + botRight.x) / 2 >= p.x)
+    {
+        // Indicates topLeftTree
+        if ((topLeft.y + botRight.y) / 2 >= p.y)
+        {
+            if (topLeftTree == NULL)
+                return search_result{NULL,this, false};
+            return topLeftTree->search(p);
+        }
+
+        // Indicates botLeftTree
+        else
+        {
+            if (botLeftTree == NULL)
+                return search_result{NULL,this, false};
+            return botLeftTree->search(p);
+        }
+    }
+    else
+    {
+        // Indicates topRightTree
+        if ((topLeft.y + botRight.y) / 2 >= p.y)
+        {
+            if (topRightTree == NULL)
+                return search_result{NULL,this, false};
+            return topRightTree->search(p);
+        }
+
+        // Indicates botRightTree
+        else
+        {
+            if (botRightTree == NULL)
+                return search_result{NULL,this, false};
+            return botRightTree->search(p);
+        }
+    }
+}
+
+// Check if current quadtree contains the point
+bool QuadTree::inBoundary(core::Vector2i p)
+{
+    return (
+        p.x >= topLeft.x && p.x <= botRight.x &&
+        p.y >= topLeft.y && p.y <= botRight.y);
+}
+
+// remove current node
+void QuadTree::remove_node(){
+    this->n = NULL;
+}
+
+std::vector<core::Object*> QuadTree::get_all_nodes(){
+    std::vector<core::Object*> all_objects;
+
+    if (n != NULL){
+        all_objects.push_back(n);
+    }
+
+    if (topLeftTree != NULL){
+        std::vector<core::Object*> result =  topLeftTree->get_all_nodes();
+        all_objects.insert(all_objects.end(), result.begin(), result.end());
+    }
+
+    if (topRightTree != NULL){
+        std::vector<core::Object*> result =  topRightTree->get_all_nodes();
+        all_objects.insert(all_objects.end(), result.begin(), result.end());
+    }
+
+    if (botRightTree != NULL){
+        std::vector<core::Object*> result =  botRightTree->get_all_nodes();
+        all_objects.insert(all_objects.end(), result.begin(), result.end());
+    }
+
+    if (botLeftTree != NULL){
+        std::vector<core::Object*> result =  botLeftTree->get_all_nodes();
+        all_objects.insert(all_objects.end(), result.begin(), result.end());
+    }
+
+    return all_objects;
+}

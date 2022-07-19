@@ -1,0 +1,170 @@
+[
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isubprojects/imgui-1.87/libimgui.so.p -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -I/usr/include/SDL2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -D_REENTRANT -MD -MQ subprojects/imgui-1.87/libimgui.so.p/imgui_demo.cpp.o -MF subprojects/imgui-1.87/libimgui.so.p/imgui_demo.cpp.o.d -o subprojects/imgui-1.87/libimgui.so.p/imgui_demo.cpp.o -c ../subprojects/imgui-1.87/imgui_demo.cpp",
+    "file": "../subprojects/imgui-1.87/imgui_demo.cpp",
+    "output": "subprojects/imgui-1.87/libimgui.so.p/imgui_demo.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isubprojects/imgui-1.87/libimgui.so.p -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -I/usr/include/SDL2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -D_REENTRANT -MD -MQ subprojects/imgui-1.87/libimgui.so.p/imgui_draw.cpp.o -MF subprojects/imgui-1.87/libimgui.so.p/imgui_draw.cpp.o.d -o subprojects/imgui-1.87/libimgui.so.p/imgui_draw.cpp.o -c ../subprojects/imgui-1.87/imgui_draw.cpp",
+    "file": "../subprojects/imgui-1.87/imgui_draw.cpp",
+    "output": "subprojects/imgui-1.87/libimgui.so.p/imgui_draw.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isubprojects/imgui-1.87/libimgui.so.p -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -I/usr/include/SDL2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -D_REENTRANT -MD -MQ subprojects/imgui-1.87/libimgui.so.p/imgui_tables.cpp.o -MF subprojects/imgui-1.87/libimgui.so.p/imgui_tables.cpp.o.d -o subprojects/imgui-1.87/libimgui.so.p/imgui_tables.cpp.o -c ../subprojects/imgui-1.87/imgui_tables.cpp",
+    "file": "../subprojects/imgui-1.87/imgui_tables.cpp",
+    "output": "subprojects/imgui-1.87/libimgui.so.p/imgui_tables.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isubprojects/imgui-1.87/libimgui.so.p -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -I/usr/include/SDL2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -D_REENTRANT -MD -MQ subprojects/imgui-1.87/libimgui.so.p/imgui_widgets.cpp.o -MF subprojects/imgui-1.87/libimgui.so.p/imgui_widgets.cpp.o.d -o subprojects/imgui-1.87/libimgui.so.p/imgui_widgets.cpp.o -c ../subprojects/imgui-1.87/imgui_widgets.cpp",
+    "file": "../subprojects/imgui-1.87/imgui_widgets.cpp",
+    "output": "subprojects/imgui-1.87/libimgui.so.p/imgui_widgets.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isubprojects/imgui-1.87/libimgui.so.p -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -I/usr/include/SDL2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -D_REENTRANT -MD -MQ subprojects/imgui-1.87/libimgui.so.p/imgui.cpp.o -MF subprojects/imgui-1.87/libimgui.so.p/imgui.cpp.o.d -o subprojects/imgui-1.87/libimgui.so.p/imgui.cpp.o -c ../subprojects/imgui-1.87/imgui.cpp",
+    "file": "../subprojects/imgui-1.87/imgui.cpp",
+    "output": "subprojects/imgui-1.87/libimgui.so.p/imgui.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isubprojects/imgui-1.87/libimgui.so.p -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -I/usr/include/SDL2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -D_REENTRANT -MD -MQ subprojects/imgui-1.87/libimgui.so.p/misc_cpp_imgui_stdlib.cpp.o -MF subprojects/imgui-1.87/libimgui.so.p/misc_cpp_imgui_stdlib.cpp.o.d -o subprojects/imgui-1.87/libimgui.so.p/misc_cpp_imgui_stdlib.cpp.o -c ../subprojects/imgui-1.87/misc/cpp/imgui_stdlib.cpp",
+    "file": "../subprojects/imgui-1.87/misc/cpp/imgui_stdlib.cpp",
+    "output": "subprojects/imgui-1.87/libimgui.so.p/misc_cpp_imgui_stdlib.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isubprojects/imgui-1.87/libimgui.so.p -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -I/usr/include/SDL2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -D_REENTRANT -MD -MQ subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_opengl3.cpp.o -MF subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_opengl3.cpp.o.d -o subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_opengl3.cpp.o -c ../subprojects/imgui-1.87/backends/imgui_impl_opengl3.cpp",
+    "file": "../subprojects/imgui-1.87/backends/imgui_impl_opengl3.cpp",
+    "output": "subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_opengl3.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isubprojects/imgui-1.87/libimgui.so.p -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -I/usr/include/SDL2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -D_REENTRANT -MD -MQ subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_sdlrenderer.cpp.o -MF subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_sdlrenderer.cpp.o.d -o subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_sdlrenderer.cpp.o -c ../subprojects/imgui-1.87/backends/imgui_impl_sdlrenderer.cpp",
+    "file": "../subprojects/imgui-1.87/backends/imgui_impl_sdlrenderer.cpp",
+    "output": "subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_sdlrenderer.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isubprojects/imgui-1.87/libimgui.so.p -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -I/usr/include/SDL2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -D_REENTRANT -MD -MQ subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_vulkan.cpp.o -MF subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_vulkan.cpp.o.d -o subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_vulkan.cpp.o -c ../subprojects/imgui-1.87/backends/imgui_impl_vulkan.cpp",
+    "file": "../subprojects/imgui-1.87/backends/imgui_impl_vulkan.cpp",
+    "output": "subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_vulkan.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isubprojects/imgui-1.87/libimgui.so.p -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -I/usr/include/SDL2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -D_REENTRANT -MD -MQ subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_glfw.cpp.o -MF subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_glfw.cpp.o.d -o subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_glfw.cpp.o -c ../subprojects/imgui-1.87/backends/imgui_impl_glfw.cpp",
+    "file": "../subprojects/imgui-1.87/backends/imgui_impl_glfw.cpp",
+    "output": "subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_glfw.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isubprojects/imgui-1.87/libimgui.so.p -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -I/usr/include/SDL2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -D_REENTRANT -MD -MQ subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_sdl.cpp.o -MF subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_sdl.cpp.o.d -o subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_sdl.cpp.o -c ../subprojects/imgui-1.87/backends/imgui_impl_sdl.cpp",
+    "file": "../subprojects/imgui-1.87/backends/imgui_impl_sdl.cpp",
+    "output": "subprojects/imgui-1.87/libimgui.so.p/backends_imgui_impl_sdl.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isubprojects/micropather/libmicropather.so.p -Isubprojects/micropather -I../subprojects/micropather -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -O0 -g -fPIC -MD -MQ subprojects/micropather/libmicropather.so.p/micropather.cpp.o -MF subprojects/micropather/libmicropather.so.p/micropather.cpp.o.d -o subprojects/micropather/libmicropather.so.p/micropather.cpp.o -c ../subprojects/micropather/micropather.cpp",
+    "file": "../subprojects/micropather/micropather.cpp",
+    "output": "subprojects/micropather/libmicropather.so.p/micropather.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isrc/core/libcore-framework.so.p -Isrc/core -I../src/core -Isrc/core/gl -I../src/core/gl -Isrc/core/graphics -I../src/core/graphics -Isrc/core/system -I../src/core/system -Isubprojects/micropather -I../subprojects/micropather -I../subprojects/nlohmann_json/single_include -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -pthread -MD -MQ src/core/libcore-framework.so.p/gl_gl_wrapper.cpp.o -MF src/core/libcore-framework.so.p/gl_gl_wrapper.cpp.o.d -o src/core/libcore-framework.so.p/gl_gl_wrapper.cpp.o -c ../src/core/gl/gl_wrapper.cpp",
+    "file": "../src/core/gl/gl_wrapper.cpp",
+    "output": "src/core/libcore-framework.so.p/gl_gl_wrapper.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isrc/core/libcore-framework.so.p -Isrc/core -I../src/core -Isrc/core/gl -I../src/core/gl -Isrc/core/graphics -I../src/core/graphics -Isrc/core/system -I../src/core/system -Isubprojects/micropather -I../subprojects/micropather -I../subprojects/nlohmann_json/single_include -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -pthread -MD -MQ src/core/libcore-framework.so.p/graphics_image.cpp.o -MF src/core/libcore-framework.so.p/graphics_image.cpp.o.d -o src/core/libcore-framework.so.p/graphics_image.cpp.o -c ../src/core/graphics/image.cpp",
+    "file": "../src/core/graphics/image.cpp",
+    "output": "src/core/libcore-framework.so.p/graphics_image.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isrc/core/libcore-framework.so.p -Isrc/core -I../src/core -Isrc/core/gl -I../src/core/gl -Isrc/core/graphics -I../src/core/graphics -Isrc/core/system -I../src/core/system -Isubprojects/micropather -I../subprojects/micropather -I../subprojects/nlohmann_json/single_include -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -pthread -MD -MQ src/core/libcore-framework.so.p/graphics_sprite.cpp.o -MF src/core/libcore-framework.so.p/graphics_sprite.cpp.o.d -o src/core/libcore-framework.so.p/graphics_sprite.cpp.o -c ../src/core/graphics/sprite.cpp",
+    "file": "../src/core/graphics/sprite.cpp",
+    "output": "src/core/libcore-framework.so.p/graphics_sprite.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isrc/core/libcore-framework.so.p -Isrc/core -I../src/core -Isrc/core/gl -I../src/core/gl -Isrc/core/graphics -I../src/core/graphics -Isrc/core/system -I../src/core/system -Isubprojects/micropather -I../subprojects/micropather -I../subprojects/nlohmann_json/single_include -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -pthread -MD -MQ src/core/libcore-framework.so.p/graphics_texture.cpp.o -MF src/core/libcore-framework.so.p/graphics_texture.cpp.o.d -o src/core/libcore-framework.so.p/graphics_texture.cpp.o -c ../src/core/graphics/texture.cpp",
+    "file": "../src/core/graphics/texture.cpp",
+    "output": "src/core/libcore-framework.so.p/graphics_texture.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isrc/core/libcore-framework.so.p -Isrc/core -I../src/core -Isrc/core/gl -I../src/core/gl -Isrc/core/graphics -I../src/core/graphics -Isrc/core/system -I../src/core/system -Isubprojects/micropather -I../subprojects/micropather -I../subprojects/nlohmann_json/single_include -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -pthread -MD -MQ src/core/libcore-framework.so.p/graphics_window.cpp.o -MF src/core/libcore-framework.so.p/graphics_window.cpp.o.d -o src/core/libcore-framework.so.p/graphics_window.cpp.o -c ../src/core/graphics/window.cpp",
+    "file": "../src/core/graphics/window.cpp",
+    "output": "src/core/libcore-framework.so.p/graphics_window.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isrc/core/libcore-framework.so.p -Isrc/core -I../src/core -Isrc/core/gl -I../src/core/gl -Isrc/core/graphics -I../src/core/graphics -Isrc/core/system -I../src/core/system -Isubprojects/micropather -I../subprojects/micropather -I../subprojects/nlohmann_json/single_include -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -pthread -MD -MQ src/core/libcore-framework.so.p/graphics_shape.cpp.o -MF src/core/libcore-framework.so.p/graphics_shape.cpp.o.d -o src/core/libcore-framework.so.p/graphics_shape.cpp.o -c ../src/core/graphics/shape.cpp",
+    "file": "../src/core/graphics/shape.cpp",
+    "output": "src/core/libcore-framework.so.p/graphics_shape.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isrc/core/libcore-framework.so.p -Isrc/core -I../src/core -Isrc/core/gl -I../src/core/gl -Isrc/core/graphics -I../src/core/graphics -Isrc/core/system -I../src/core/system -Isubprojects/micropather -I../subprojects/micropather -I../subprojects/nlohmann_json/single_include -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -pthread -MD -MQ src/core/libcore-framework.so.p/graphics_view.cpp.o -MF src/core/libcore-framework.so.p/graphics_view.cpp.o.d -o src/core/libcore-framework.so.p/graphics_view.cpp.o -c ../src/core/graphics/view.cpp",
+    "file": "../src/core/graphics/view.cpp",
+    "output": "src/core/libcore-framework.so.p/graphics_view.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isrc/core/libcore-framework.so.p -Isrc/core -I../src/core -Isrc/core/gl -I../src/core/gl -Isrc/core/graphics -I../src/core/graphics -Isrc/core/system -I../src/core/system -Isubprojects/micropather -I../subprojects/micropather -I../subprojects/nlohmann_json/single_include -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -pthread -MD -MQ src/core/libcore-framework.so.p/graphics_stb.cpp.o -MF src/core/libcore-framework.so.p/graphics_stb.cpp.o.d -o src/core/libcore-framework.so.p/graphics_stb.cpp.o -c ../src/core/graphics/stb.cpp",
+    "file": "../src/core/graphics/stb.cpp",
+    "output": "src/core/libcore-framework.so.p/graphics_stb.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isrc/core/libcore-framework.so.p -Isrc/core -I../src/core -Isrc/core/gl -I../src/core/gl -Isrc/core/graphics -I../src/core/graphics -Isrc/core/system -I../src/core/system -Isubprojects/micropather -I../subprojects/micropather -I../subprojects/nlohmann_json/single_include -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -pthread -MD -MQ src/core/libcore-framework.so.p/system_transform.cpp.o -MF src/core/libcore-framework.so.p/system_transform.cpp.o.d -o src/core/libcore-framework.so.p/system_transform.cpp.o -c ../src/core/system/transform.cpp",
+    "file": "../src/core/system/transform.cpp",
+    "output": "src/core/libcore-framework.so.p/system_transform.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isrc/core/libcore-framework.so.p -Isrc/core -I../src/core -Isrc/core/gl -I../src/core/gl -Isrc/core/graphics -I../src/core/graphics -Isrc/core/system -I../src/core/system -Isubprojects/micropather -I../subprojects/micropather -I../subprojects/nlohmann_json/single_include -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -pthread -MD -MQ src/core/libcore-framework.so.p/system_object.cpp.o -MF src/core/libcore-framework.so.p/system_object.cpp.o.d -o src/core/libcore-framework.so.p/system_object.cpp.o -c ../src/core/system/object.cpp",
+    "file": "../src/core/system/object.cpp",
+    "output": "src/core/libcore-framework.so.p/system_object.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isrc/core/libcore-framework.so.p -Isrc/core -I../src/core -Isrc/core/gl -I../src/core/gl -Isrc/core/graphics -I../src/core/graphics -Isrc/core/system -I../src/core/system -Isubprojects/micropather -I../subprojects/micropather -I../subprojects/nlohmann_json/single_include -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -pthread -MD -MQ src/core/libcore-framework.so.p/system_random_machine.cpp.o -MF src/core/libcore-framework.so.p/system_random_machine.cpp.o.d -o src/core/libcore-framework.so.p/system_random_machine.cpp.o -c ../src/core/system/random_machine.cpp",
+    "file": "../src/core/system/random_machine.cpp",
+    "output": "src/core/libcore-framework.so.p/system_random_machine.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isrc/core/libcore-framework.so.p -Isrc/core -I../src/core -Isrc/core/gl -I../src/core/gl -Isrc/core/graphics -I../src/core/graphics -Isrc/core/system -I../src/core/system -Isubprojects/micropather -I../subprojects/micropather -I../subprojects/nlohmann_json/single_include -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -pthread -MD -MQ src/core/libcore-framework.so.p/system_scene.cpp.o -MF src/core/libcore-framework.so.p/system_scene.cpp.o.d -o src/core/libcore-framework.so.p/system_scene.cpp.o -c ../src/core/system/scene.cpp",
+    "file": "../src/core/system/scene.cpp",
+    "output": "src/core/libcore-framework.so.p/system_scene.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isrc/core/libcore-framework.so.p -Isrc/core -I../src/core -Isrc/core/gl -I../src/core/gl -Isrc/core/graphics -I../src/core/graphics -Isrc/core/system -I../src/core/system -Isubprojects/micropather -I../subprojects/micropather -I../subprojects/nlohmann_json/single_include -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -pthread -MD -MQ src/core/libcore-framework.so.p/system_data.cpp.o -MF src/core/libcore-framework.so.p/system_data.cpp.o.d -o src/core/libcore-framework.so.p/system_data.cpp.o -c ../src/core/system/data.cpp",
+    "file": "../src/core/system/data.cpp",
+    "output": "src/core/libcore-framework.so.p/system_data.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isrc/core/libcore-framework.so.p -Isrc/core -I../src/core -Isrc/core/gl -I../src/core/gl -Isrc/core/graphics -I../src/core/graphics -Isrc/core/system -I../src/core/system -Isubprojects/micropather -I../subprojects/micropather -I../subprojects/nlohmann_json/single_include -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -fPIC -pthread -MD -MQ src/core/libcore-framework.so.p/system_singleton.cpp.o -MF src/core/libcore-framework.so.p/system_singleton.cpp.o.d -o src/core/libcore-framework.so.p/system_singleton.cpp.o -c ../src/core/system/singleton.cpp",
+    "file": "../src/core/system/singleton.cpp",
+    "output": "src/core/libcore-framework.so.p/system_singleton.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isrc/example/Example.p -Isrc/example -I../src/example -Isrc/core -I../src/core -Isubprojects/micropather -I../subprojects/micropather -I../subprojects/nlohmann_json/single_include -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -pthread -MD -MQ src/example/Example.p/main.cpp.o -MF src/example/Example.p/main.cpp.o.d -o src/example/Example.p/main.cpp.o -c ../src/example/main.cpp",
+    "file": "../src/example/main.cpp",
+    "output": "src/example/Example.p/main.cpp.o"
+  },
+  {
+    "directory": "/home/izkeas/Projects/C-C++/games/core_lib/build",
+    "command": "c++ -Isrc/example/Example.p -Isrc/example -I../src/example -Isrc/core -I../src/core -Isubprojects/micropather -I../subprojects/micropather -I../subprojects/nlohmann_json/single_include -Isubprojects/imgui-1.87 -I../subprojects/imgui-1.87 -I../subprojects/imgui-1.87/backends -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++20 -O0 -g -pthread -MD -MQ src/example/Example.p/gameObject.cpp.o -MF src/example/Example.p/gameObject.cpp.o.d -o src/example/Example.p/gameObject.cpp.o -c ../src/example/gameObject.cpp",
+    "file": "../src/example/gameObject.cpp",
+    "output": "src/example/Example.p/gameObject.cpp.o"
+  }
+]

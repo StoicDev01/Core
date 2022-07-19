@@ -1,0 +1,23 @@
+project(
+    'core-framework', 
+    'cpp',
+    default_options : ['cpp_std=c++20'],
+    version : '0.1.0',
+    license : 'MIT' 
+)
+
+glfw_dep            =   dependency('glfw3')
+glew_dep            =   dependency('glew')
+threads_dep         =   dependency('threads')
+imgui_dep           =   dependency('imgui')
+micropather_dep     =   dependency('micropather')
+fastnoiselite_dep   =   dependency('fastnoiselite')
+x11_dep             =   dependency('x11')
+fmt_dep             =   dependency('fmt')
+json_dep            =   dependency('nlohmann_json')
+gl_dep              =   dependency('opengl')
+glm_dep             =   dependency('glm')
+glew_dep            =   dependency('glew')
+stb_dep             =   dependency('stb')
+
+subdir('src')
