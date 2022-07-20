@@ -22,6 +22,7 @@ A game framework with 2D and 3D capabilities
 ## Build
 this project uses meson as build system, to build do the following:
 
+        meson setup build
         cd ./build
         meson compile
 
