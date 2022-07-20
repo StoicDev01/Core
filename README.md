@@ -36,3 +36,4 @@ if everything went well, you will see a white place with a rotating image approa
 - glew to use opengl
 - glm to do the math
 - stb to load and save images
+- imgui to make window compatible with imgui
