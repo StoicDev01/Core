@@ -2,7 +2,7 @@
 
 namespace core::graphics{
 
-    Window::Window(){
+    Window::Window(int width, int height, const char* name){
         glfwSetErrorCallback(glfw_error_callback);
         glfwInit();
 
@@ -12,7 +12,7 @@ namespace core::graphics{
         glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-        m_glfw_window = glfwCreateWindow(1600, 900, "Rpg", NULL, NULL);
+        m_glfw_window = glfwCreateWindow(width, height, name, NULL, NULL);
         glfwSetInputMode(m_glfw_window, GLFW_STICKY_KEYS, GL_TRUE);
         m_open = true;
     }
@@ -118,6 +118,10 @@ namespace core::graphics{
 
     void Window::close(){
         glfwSetWindowShouldClose(m_glfw_window, GLFW_TRUE);
+    }
+
+    void Window::resize(int width, int height){
+        glfwSetWindowSize(m_glfw_window, width, height);
     }
 
     GLFWwindow* Window::get_glfw_window(){

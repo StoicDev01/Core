@@ -17,7 +17,7 @@
 namespace core::graphics{
     class Window{
         public:
-        Window();
+        Window(int width, int height, const char* name);
         ~Window();
 
         void create_opengl_context();
@@ -36,13 +36,14 @@ namespace core::graphics{
         void render();
 
         void clear(Color color = Color::white());
-        bool is_open();
         void close();
+
+        bool is_open();
+        void resize(int width, int height);
 
         GLFWwindow* get_glfw_window();
 
         int get_key(int glfw_key);
-
         int get_mouse_button(int glfw_mouse_button);
 
         bool is_key_pressed(int glfw_key);

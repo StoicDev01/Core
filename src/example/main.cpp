@@ -59,7 +59,7 @@ void client(core::graphics::Window& window){
 
 int main() {
     // Create window
-    core::graphics::Window window;
+    core::graphics::Window window(1600, 900, "Example window");
     // Create opengl and imgui context, and init glew
     window.create_context(); 
 
