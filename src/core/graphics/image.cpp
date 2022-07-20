@@ -43,8 +43,6 @@ namespace core::graphics{
         stbi_set_flip_vertically_on_load(true);  
         m_data = stbi_load(path.c_str(), &size_x, &size_y, &m_color_channels, 3);
 
-        assert(m_data);
-
         m_size.x = (uint)size_x;
         m_size.y = (uint)size_y;
     }
@@ -102,6 +100,12 @@ namespace core::graphics{
             return false;
         else
             return true;
+    }
+
+    bool Image::is_valid() const{
+        if (m_data)
+            return true;
+        return false;
     }
 
     unsigned char* Image::get_data(){

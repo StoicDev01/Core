@@ -6,6 +6,5 @@ system_sources = files(
     #'quadtree.cpp',
     'random_machine.cpp',
     'scene.cpp',
-    'data.cpp',
-    'singleton.cpp'
+    'data.cpp'
 )

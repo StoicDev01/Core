@@ -4,9 +4,7 @@ subdir('graphics')
 
 
 dependencies = [
-    micropather_dep, 
     fmt_dep, 
-    json_dep, 
     threads_dep, 
     gl_dep,
     glm_dep,

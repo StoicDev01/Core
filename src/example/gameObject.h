@@ -2,7 +2,6 @@
 
 #include <filesystem>
 #include "../core/system/scene.h"
-#include "../core/system/singleton.h"
 
 // Example of a singleton
 

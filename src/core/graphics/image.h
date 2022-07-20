@@ -39,7 +39,9 @@ namespace core::graphics {
         void save(std::filesystem::path p_path);
         void set_pixel(core::Vector2u pixel_pos, Color color);
         Color get_pixel(core::Vector2u pixel_pos) const ;
+
         bool in_bounds(core::Vector2u pixel_pos) const;
+        bool is_valid() const;
 
         unsigned char* get_data();
 

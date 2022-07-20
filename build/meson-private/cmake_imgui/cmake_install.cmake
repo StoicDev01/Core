@@ -1,4 +1,4 @@
-# Install script for directory: /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/cmake_imgui
+# Install script for directory: /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/cmake_imgui
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/cmake_imgui/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/cmake_imgui/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

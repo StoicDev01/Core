@@ -1,36 +1,16 @@
-Build started at 2022-07-19T18:27:51.024361
+Build started at 2022-07-20T14:07:57.799744
 Main binary: /usr/bin/python
-Build Options: 
+Build Options: -Dbuildtype=debug
 Python system: Linux
 The Meson build system
 Version: 0.63.0
-Source dir: /home/izkeas/Projects/C-C++/games/core_lib
-Build dir: /home/izkeas/Projects/C-C++/games/core_lib/build
+Source dir: /home/izkeas/Projects/C-C++/games/core_framework
+Build dir: /home/izkeas/Projects/C-C++/games/core_framework/build
 Build type: native build
-Project name: core-framework
+Project name: core-lib
 Project version: 0.1.0
-Sanity testing C++ compiler: c++
-Is cross compiler: False.
-Sanity check compiler command line: c++ sanitycheckcpp.cc -o sanitycheckcpp.exe -D_FILE_OFFSET_BITS=64
-Sanity check compile stdout:
-
------
-Sanity check compile stderr:
-
------
-Running test binary command: /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/sanitycheckcpp.exe
 C++ compiler for the host machine: c++ (gcc 12.1.0 "c++ (GCC) 12.1.0")
 C++ linker for the host machine: c++ ld.bfd 2.38
-Sanity testing C++ compiler: c++
-Is cross compiler: False.
-Sanity check compiler command line: c++ sanitycheckcpp.cc -o sanitycheckcpp.exe -D_FILE_OFFSET_BITS=64
-Sanity check compile stdout:
-
------
-Sanity check compile stderr:
-
------
-Running test binary command: /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/sanitycheckcpp.exe
 C++ compiler for the build machine: c++ (gcc 12.1.0 "c++ (GCC) 12.1.0")
 C++ linker for the build machine: c++ ld.bfd 2.38
 Build machine cpu family: x86_64
@@ -39,113 +19,64 @@ Host machine cpu family: x86_64
 Host machine cpu: x86_64
 Target machine cpu family: x86_64
 Target machine cpu: x86_64
+Dependency glfw3 found: YES 3.3.7 (cached)
+Dependency glew found: YES 2.2.0 (cached)
+Dependency threads found: YES unknown (cached)
+Dependency fmt found: YES 8.1.1 (cached)
+Dependency opengl found: YES 4.5 (cached)
+Dependency glm found: YES 0.9.9.8 (cached)
+Dependency glew found: YES 2.2.0 (cached)
 Pkg-config binary for 1 is not cached.
 Pkg-config binary missing from cross or native file, or env var undefined.
 Trying a default Pkg-config fallback at pkg-config
 Found pkg-config: /usr/bin/pkg-config (1.8.0)
-Determining dependency 'glfw3' with pkg-config executable '/usr/bin/pkg-config'
+Determining dependency 'stb' with pkg-config executable '/usr/bin/pkg-config'
 env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --modversion glfw3` -> 0
-3.3.7
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --cflags glfw3` -> 0
-
-env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --libs glfw3` -> 0
--L/usr/lib -lglfw
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --libs glfw3` -> 0
--lglfw
-Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpnellvg9d
-Command line:  c++ /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpnellvg9d/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpnellvg9d/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
-
-Code:
- #include<stdio.h>
-        
-        int main(void) {
-            printf("%ld\n", (long)(sizeof(void *)));
-            return 0;
-        }
-Compiler stdout:
- 
-Compiler stderr:
- 
-Program stdout:
-
-8
-
-Program stderr:
-
-
-Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpvgdj2zm9
-Command line:  c++ /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpvgdj2zm9/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpvgdj2zm9/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive --print-search-dirs 
-
-Code:
- 
-Compiler stdout:
- install: /usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/
-programs: =/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../x86_64-pc-linux-gnu/bin/x86_64-pc-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../x86_64-pc-linux-gnu/bin/
-libraries: =/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../x86_64-pc-linux-gnu/lib/x86_64-pc-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../x86_64-pc-linux-gnu/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../x86_64-pc-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib/:/lib/x86_64-pc-linux-gnu/12.1.0/:/lib/../lib/:/usr/lib/x86_64-pc-linux-gnu/12.1.0/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../x86_64-pc-linux-gnu/lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../:/lib/:/usr/lib/
-
-Compiler stderr:
- 
-Run-time dependency glfw3 found: YES 3.3.7
-Pkg-config binary for 1 is cached.
-Determining dependency 'glew' with pkg-config executable '/usr/bin/pkg-config'
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --modversion glew` -> 0
-2.2.0
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --cflags glew` -> 0
-
-env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --libs glew` -> 0
--L/usr/lib -lGLEW -lGL -lX11 -lGLU -lOpenGL
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --libs glew` -> 0
--lGLEW -lGL -lX11 -lGLU -lOpenGL
-Run-time dependency glew found: YES 2.2.0
-Run-time dependency threads found: YES
-Pkg-config binary for 1 is cached.
-Determining dependency 'imgui' with pkg-config executable '/usr/bin/pkg-config'
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --modversion imgui` -> 1
+Called `/usr/bin/pkg-config --modversion stb` -> 1
 
 CMake binary for 1 is not cached
 CMake binary missing from cross or native file, or env var undefined.
 Trying a default CMake fallback at cmake
 Found CMake: /usr/bin/cmake (3.23.2)
 Extracting basic cmake information
-CMake Toolchain: Calling CMake once to generate the compiler state
-Calling CMake (['/usr/bin/cmake']) in /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/__CMake_compiler_info__ with:
-  - "--trace-expand"
-  - "--trace-format=json-v1"
-  - "--no-warn-unused-cli"
-  - "--trace-redirect=cmake_trace.txt"
-  - "-G"
-  - "Ninja"
-  - "-DCMAKE_TOOLCHAIN_FILE=/home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/__CMake_compiler_info__/CMakeMesonTempToolchainFile.cmake"
-  - "."
 Try CMake generator: auto
-Calling CMake (['/usr/bin/cmake']) in /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/cmake_imgui with:
+Calling CMake (['/usr/bin/cmake']) in /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/cmake_stb with:
   - "--trace-expand"
   - "--trace-format=json-v1"
   - "--no-warn-unused-cli"
   - "--trace-redirect=cmake_trace.txt"
-  - "-DCMAKE_TOOLCHAIN_FILE=/home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/cmake_imgui/CMakeMesonToolchainFile.cmake"
+  - "-DCMAKE_TOOLCHAIN_FILE=/home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/cmake_stb/CMakeMesonToolchainFile.cmake"
   - "."
   -- Module search paths:    ['/', '/opt', '/usr', '/usr/local']
   -- CMake root:             /usr/share/cmake
   -- CMake architectures:    ['libpyldb-util.cpython-310-x86-64-linux-gnu.so', 'libpyldb-util.cpython-310-x86-64-linux-gnu.so.2', 'libpyldb-util.cpython-310-x86-64-linux-gnu.so.2.5.0', 'libpyldb-util.cpython-310-x86-64-linux-gnu.so.2.5.1', 'libpytalloc-util.cpython-310-x86-64-linux-gnu.so', 'libpytalloc-util.cpython-310-x86-64-linux-gnu.so.2', 'libpytalloc-util.cpython-310-x86-64-linux-gnu.so.2.3.3', 'libpytalloc-util.cpython-310-x86-64-linux-gnu.so.2.3.4', 'libsamba-policy.cpython-310-x86-64-linux-gnu.so', 'libsamba-policy.cpython-310-x86-64-linux-gnu.so.0', 'libsamba-policy.cpython-310-x86-64-linux-gnu.so.0.0.1']
   -- CMake lib search paths: ['lib', 'lib32', 'lib64', 'libx32', 'share', 'lib/libpyldb-util.cpython-310-x86-64-linux-gnu.so', 'lib/libpyldb-util.cpython-310-x86-64-linux-gnu.so.2', 'lib/libpyldb-util.cpython-310-x86-64-linux-gnu.so.2.5.0', 'lib/libpyldb-util.cpython-310-x86-64-linux-gnu.so.2.5.1', 'lib/libpytalloc-util.cpython-310-x86-64-linux-gnu.so', 'lib/libpytalloc-util.cpython-310-x86-64-linux-gnu.so.2', 'lib/libpytalloc-util.cpython-310-x86-64-linux-gnu.so.2.3.3', 'lib/libpytalloc-util.cpython-310-x86-64-linux-gnu.so.2.3.4', 'lib/libsamba-policy.cpython-310-x86-64-linux-gnu.so', 'lib/libsamba-policy.cpython-310-x86-64-linux-gnu.so.0', 'lib/libsamba-policy.cpython-310-x86-64-linux-gnu.so.0.0.1']
+Preliminary CMake check failed. Aborting.
+Run-time dependency stb found: NO (tried pkgconfig and cmake)
+Looking for a fallback subproject for the dependency stb
+
+Executing subproject stb 
+
+Project name: stb
+Project version: 1.0.0
+C++ compiler for the host machine: c++ (gcc 12.1.0 "c++ (GCC) 12.1.0")
+C++ linker for the host machine: c++ ld.bfd 2.38
+C++ compiler for the build machine: c++ (gcc 12.1.0 "c++ (GCC) 12.1.0")
+C++ linker for the build machine: c++ ld.bfd 2.38
+Build targets in project: 0
+Subproject stb finished.
+
+Dependency stb found: YES 1.0.0 (overridden)
+Pkg-config binary for 1 is cached.
+Determining dependency 'imgui' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion imgui` -> 1
+
+CMake binary for 1 is cached.
 
 Determining dependency 'imgui' with CMake executable '/usr/bin/cmake'
 Try CMake generator: auto
-Calling CMake (['/usr/bin/cmake']) in /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/cmake_imgui with:
+Calling CMake (['/usr/bin/cmake']) in /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/cmake_imgui with:
   - "-DNAME=imgui"
   - "-DARCHS=libpyldb-util.cpython-310-x86-64-linux-gnu.so;libpyldb-util.cpython-310-x86-64-linux-gnu.so.2;libpyldb-util.cpython-310-x86-64-linux-gnu.so.2.5.0;libpyldb-util.cpython-310-x86-64-linux-gnu.so.2.5.1;libpytalloc-util.cpython-310-x86-64-linux-gnu.so;libpytalloc-util.cpython-310-x86-64-linux-gnu.so.2;libpytalloc-util.cpython-310-x86-64-linux-gnu.so.2.3.3;libpytalloc-util.cpython-310-x86-64-linux-gnu.so.2.3.4;libsamba-policy.cpython-310-x86-64-linux-gnu.so;libsamba-policy.cpython-310-x86-64-linux-gnu.so.0;libsamba-policy.cpython-310-x86-64-linux-gnu.so.0.0.1"
   - "-DVERSION="
@@ -154,7 +85,7 @@ Calling CMake (['/usr/bin/cmake']) in /home/izkeas/Projects/C-C++/games/core_lib
   - "--trace-format=json-v1"
   - "--no-warn-unused-cli"
   - "--trace-redirect=cmake_trace.txt"
-  - "-DCMAKE_TOOLCHAIN_FILE=/home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/cmake_imgui/CMakeMesonToolchainFile.cmake"
+  - "-DCMAKE_TOOLCHAIN_FILE=/home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/cmake_imgui/CMakeMesonToolchainFile.cmake"
   - "."
 CMake failed for generator  and package imgui with error code 1
 OUT:
@@ -162,7 +93,7 @@ Running with expanded trace output on.
 Not searching for unused variables given on the command line.
 Trace will be written to cmake_trace.txt
 -- Configuring incomplete, errors occurred!
-See also "/home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/cmake_imgui/CMakeFiles/CMakeOutput.log".
+See also "/home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/cmake_imgui/CMakeFiles/CMakeOutput.log".
 
 
 
@@ -199,7 +130,7 @@ Running with expanded trace output on.
 Not searching for unused variables given on the command line.
 Trace will be written to cmake_trace.txt
 -- Configuring incomplete, errors occurred!
-See also "/home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/cmake_imgui/CMakeFiles/CMakeOutput.log".
+See also "/home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/cmake_imgui/CMakeFiles/CMakeOutput.log".
 
 
 
@@ -230,7 +161,7 @@ Call Stack (most recent call first):
 
 
 Try CMake generator: Ninja
-Calling CMake (['/usr/bin/cmake']) in /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/cmake_imgui with:
+Calling CMake (['/usr/bin/cmake']) in /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/cmake_imgui with:
   - "-G"
   - "Ninja"
   - "-DNAME=imgui"
@@ -241,7 +172,7 @@ Calling CMake (['/usr/bin/cmake']) in /home/izkeas/Projects/C-C++/games/core_lib
   - "--trace-format=json-v1"
   - "--no-warn-unused-cli"
   - "--trace-redirect=cmake_trace.txt"
-  - "-DCMAKE_TOOLCHAIN_FILE=/home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/cmake_imgui/CMakeMesonToolchainFile.cmake"
+  - "-DCMAKE_TOOLCHAIN_FILE=/home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/cmake_imgui/CMakeMesonToolchainFile.cmake"
   - "."
 CMake failed for generator Ninja and package imgui with error code 1
 OUT:
@@ -249,7 +180,7 @@ Running with expanded trace output on.
 Not searching for unused variables given on the command line.
 Trace will be written to cmake_trace.txt
 -- Configuring incomplete, errors occurred!
-See also "/home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/cmake_imgui/CMakeFiles/CMakeOutput.log".
+See also "/home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/cmake_imgui/CMakeFiles/CMakeOutput.log".
 
 
 
@@ -280,7 +211,7 @@ Call Stack (most recent call first):
 
 
 Try CMake generator: Unix Makefiles
-Calling CMake (['/usr/bin/cmake']) in /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/cmake_imgui with:
+Calling CMake (['/usr/bin/cmake']) in /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/cmake_imgui with:
   - "-G"
   - "Unix Makefiles"
   - "-DNAME=imgui"
@@ -291,7 +222,7 @@ Calling CMake (['/usr/bin/cmake']) in /home/izkeas/Projects/C-C++/games/core_lib
   - "--trace-format=json-v1"
   - "--no-warn-unused-cli"
   - "--trace-redirect=cmake_trace.txt"
-  - "-DCMAKE_TOOLCHAIN_FILE=/home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/cmake_imgui/CMakeMesonToolchainFile.cmake"
+  - "-DCMAKE_TOOLCHAIN_FILE=/home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/cmake_imgui/CMakeMesonToolchainFile.cmake"
   - "."
 CMake failed for generator Unix Makefiles and package imgui with error code 1
 OUT:
@@ -299,7 +230,7 @@ Running with expanded trace output on.
 Not searching for unused variables given on the command line.
 Trace will be written to cmake_trace.txt
 -- Configuring incomplete, errors occurred!
-See also "/home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/cmake_imgui/CMakeFiles/CMakeOutput.log".
+See also "/home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/cmake_imgui/CMakeFiles/CMakeOutput.log".
 
 
 
@@ -330,7 +261,7 @@ Call Stack (most recent call first):
 
 
 Try CMake generator: Visual Studio 10 2010
-Calling CMake (['/usr/bin/cmake']) in /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/cmake_imgui with:
+Calling CMake (['/usr/bin/cmake']) in /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/cmake_imgui with:
   - "-G"
   - "Visual Studio 10 2010"
   - "-DNAME=imgui"
@@ -341,7 +272,7 @@ Calling CMake (['/usr/bin/cmake']) in /home/izkeas/Projects/C-C++/games/core_lib
   - "--trace-format=json-v1"
   - "--no-warn-unused-cli"
   - "--trace-redirect=cmake_trace.txt"
-  - "-DCMAKE_TOOLCHAIN_FILE=/home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/cmake_imgui/CMakeMesonToolchainFile.cmake"
+  - "-DCMAKE_TOOLCHAIN_FILE=/home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/cmake_imgui/CMakeMesonToolchainFile.cmake"
   - "."
 CMake failed for generator Visual Studio 10 2010 and package imgui with error code 1
 OUT:
@@ -388,8 +319,8 @@ C++ linker for the host machine: c++ ld.bfd 2.38
 C++ compiler for the build machine: c++ (gcc 12.1.0 "c++ (GCC) 12.1.0")
 C++ linker for the build machine: c++ ld.bfd 2.38
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpnoua6jf4
-Command line:  c++ /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpnoua6jf4/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpnoua6jf4/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -Wl,--start-group -ld3d9 -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmpm27_y029
+Command line:  c++ /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmpm27_y029/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmpm27_y029/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -Wl,--start-group -ld3d9 -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(void) { return 0; }
@@ -400,10 +331,45 @@ Compiler stderr:
  /usr/bin/ld: cannot find -ld3d9: No such file or directory
 collect2: error: ld returned 1 exit status
 
+Running compile:
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmpwwamg305
+Command line:  c++ /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmpwwamg305/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmpwwamg305/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include<stdio.h>
+        
+        int main(void) {
+            printf("%ld\n", (long)(sizeof(void *)));
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Program stdout:
+
+8
+
+Program stderr:
+
+
+Running compile:
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmph7xdztxk
+Command line:  c++ /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmph7xdztxk/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmph7xdztxk/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ install: /usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/
+programs: =/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../x86_64-pc-linux-gnu/bin/x86_64-pc-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../x86_64-pc-linux-gnu/bin/
+libraries: =/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../x86_64-pc-linux-gnu/lib/x86_64-pc-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../x86_64-pc-linux-gnu/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../x86_64-pc-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib/:/lib/x86_64-pc-linux-gnu/12.1.0/:/lib/../lib/:/usr/lib/x86_64-pc-linux-gnu/12.1.0/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../x86_64-pc-linux-gnu/lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../:/lib/:/usr/lib/
+
+Compiler stderr:
+ 
 Library d3d9 found: NO
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmp7g8hobsz
-Command line:  c++ /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmp7g8hobsz/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmp7g8hobsz/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -Wl,--start-group -ld3d10 -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmpbawkr894
+Command line:  c++ /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmpbawkr894/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmpbawkr894/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -Wl,--start-group -ld3d10 -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(void) { return 0; }
@@ -416,8 +382,8 @@ collect2: error: ld returned 1 exit status
 
 Library d3d10 found: NO
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpph9s4gqq
-Command line:  c++ /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpph9s4gqq/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpph9s4gqq/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -Wl,--start-group -ld3d11 -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmph_z2uydw
+Command line:  c++ /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmph_z2uydw/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmph_z2uydw/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -Wl,--start-group -ld3d11 -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(void) { return 0; }
@@ -430,8 +396,8 @@ collect2: error: ld returned 1 exit status
 
 Library d3d11 found: NO
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpml_g8214
-Command line:  c++ /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpml_g8214/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpml_g8214/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -Wl,--start-group -ld3d12 -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmp3ar_lcta
+Command line:  c++ /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmp3ar_lcta/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmp3ar_lcta/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -Wl,--start-group -ld3d12 -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(void) { return 0; }
@@ -444,8 +410,8 @@ collect2: error: ld returned 1 exit status
 
 Library d3d12 found: NO
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmp5312etrw
-Command line:  c++ /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmp5312etrw/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmp5312etrw/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -framework Foundation 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmp72g7o98t
+Command line:  c++ /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmp72g7o98t/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmp72g7o98t/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -framework Foundation 
 
 Code:
  int main(void) { return 0; }
@@ -455,8 +421,8 @@ Compiler stderr:
  c++: error: unrecognized command-line option '-framework'
 
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmp1k05epa3
-Command line:  c++ /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmp1k05epa3/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmp1k05epa3/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -framework AppKit 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmpag532t5q
+Command line:  c++ /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmpag532t5q/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmpag532t5q/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -framework AppKit 
 
 Code:
  int main(void) { return 0; }
@@ -466,8 +432,8 @@ Compiler stderr:
  c++: error: unrecognized command-line option '-framework'
 
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpm0x6shkc
-Command line:  c++ /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpm0x6shkc/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpm0x6shkc/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -framework GameController 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmp6f3c381e
+Command line:  c++ /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmp6f3c381e/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmp6f3c381e/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -framework GameController 
 
 Code:
  int main(void) { return 0; }
@@ -477,8 +443,8 @@ Compiler stderr:
  c++: error: unrecognized command-line option '-framework'
 
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpp0fhbo_g
-Command line:  c++ /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpp0fhbo_g/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpp0fhbo_g/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -framework Metal 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmpzj51fesm
+Command line:  c++ /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmpzj51fesm/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmpzj51fesm/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -framework Metal 
 
 Code:
  int main(void) { return 0; }
@@ -489,8 +455,8 @@ Compiler stderr:
 
 Run-time dependency appleframeworks found: NO (tried framework)
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpavugmykl
-Command line:  c++ /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpavugmykl/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmpavugmykl/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -Wl,--start-group -ldl -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmp5alcpdgt
+Command line:  c++ /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmp5alcpdgt/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/tmp5alcpdgt/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -Wl,--start-group -ldl -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(void) { return 0; }
@@ -500,41 +466,11 @@ Compiler stdout:
 Compiler stderr:
  
 Library dl found: YES
-Pkg-config binary for 1 is cached.
-Determining dependency 'sdl2' with pkg-config executable '/usr/bin/pkg-config'
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --modversion sdl2` -> 0
-2.0.22
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --cflags sdl2` -> 0
--I/usr/include/SDL2 -D_REENTRANT
-env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --libs sdl2` -> 0
--L/usr/lib -pthread -lSDL2
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --libs sdl2` -> 0
--pthread -lSDL2
-Run-time dependency sdl2 found: YES 2.0.22
-Pkg-config binary for 1 is cached.
-Determining dependency 'vulkan' with pkg-config executable '/usr/bin/pkg-config'
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --modversion vulkan` -> 0
-1.3.217
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --cflags vulkan` -> 0
-
-env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --libs vulkan` -> 0
--L/usr/lib -lvulkan
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --libs vulkan` -> 0
--lvulkan
-Run-time dependency vulkan found: YES 1.3.217
+Dependency sdl2 found: YES 2.0.22 (cached)
+Dependency vulkan found: YES 1.3.217 (cached)
 Running compile:
-Working directory:  /tmp/tmp4f94yh2_
-Command line:  c++ /tmp/tmp4f94yh2_/testfile.cpp -o /tmp/tmp4f94yh2_/output.obj -D_FILE_OFFSET_BITS=64 -c -std=c++20 
+Working directory:  /tmp/tmpjat8u4j8
+Command line:  c++ /tmp/tmpjat8u4j8/testfile.cpp -o /tmp/tmpjat8u4j8/output.obj -D_FILE_OFFSET_BITS=64 -c -std=c++20 
 
 Code:
  int i = static_cast<int>(0);
@@ -543,9 +479,8 @@ Compiler stdout:
 Compiler stderr:
  
 Compiler accepts -std=c++20: YES
-Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmptc8h2sjr
-Command line:  c++ /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmptc8h2sjr/testfile.cpp -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -fpermissive -std=c++20 
+Using cached compile:
+Cached command line:   
 
 Code:
  
@@ -556,14 +491,14 @@ Code:
         #else
          #include <webgpu/webgpu.h>
         #endif
-Compiler stdout:
+Cached compiler stdout:
  
-Compiler stderr:
+Cached compiler stderr:
  /home/izkeas/Projects/C-C++/games/core_lib/build/meson-private/tmptc8h2sjr/testfile.cpp:4:12: error: #error "Header 'webgpu/webgpu.h' could not be found"
     4 |           #error "Header 'webgpu/webgpu.h' could not be found"
       |            ^~~~~
 
-Has header "webgpu/webgpu.h" : NO 
+Has header "webgpu/webgpu.h" : NO (cached)
 Dependency glfw3 found: YES 3.3.7 (cached)
 Dependency sdl2 found: YES 2.0.22 (cached)
 Pkg-config binary for 1 is cached.
@@ -586,175 +521,15 @@ Build targets in project: 1
 Subproject imgui finished.
 
 Dependency imgui from subproject subprojects/imgui-1.87 found: YES 1.87
-Pkg-config binary for 1 is cached.
-Determining dependency 'micropather' with pkg-config executable '/usr/bin/pkg-config'
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --modversion micropather` -> 1
+Build targets in project: 3
 
-CMake binary for 1 is cached.
-Preliminary CMake check failed. Aborting.
-Run-time dependency micropather found: NO (tried pkgconfig and cmake)
-Looking for a fallback subproject for the dependency micropather
-
-Executing subproject micropather 
-
-Project name: micropather
-Project version: 1.0.0
-C++ compiler for the host machine: c++ (gcc 12.1.0 "c++ (GCC) 12.1.0")
-C++ linker for the host machine: c++ ld.bfd 2.38
-C++ compiler for the build machine: c++ (gcc 12.1.0 "c++ (GCC) 12.1.0")
-C++ linker for the build machine: c++ ld.bfd 2.38
-Build targets in project: 2
-Subproject micropather finished.
-
-Dependency micropather found: YES 1.0.0 (overridden)
-Pkg-config binary for 1 is cached.
-Determining dependency 'fastnoiselite' with pkg-config executable '/usr/bin/pkg-config'
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --modversion fastnoiselite` -> 1
-
-CMake binary for 1 is cached.
-Preliminary CMake check failed. Aborting.
-Run-time dependency fastnoiselite found: NO (tried pkgconfig and cmake)
-Looking for a fallback subproject for the dependency fastnoiselite
-
-Executing subproject fastnoiselite 
-
-Project name: fastnoiselite
-Project version: 1.0.3
-Build targets in project: 2
-Subproject fastnoiselite finished.
-
-Dependency fastnoiselite found: YES 1.0.3 (overridden)
-Pkg-config binary for 1 is cached.
-Determining dependency 'x11' with pkg-config executable '/usr/bin/pkg-config'
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --modversion x11` -> 0
-1.8.1
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --cflags x11` -> 0
-
-env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --libs x11` -> 0
--L/usr/lib -lX11
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --libs x11` -> 0
--lX11
-Run-time dependency x11 found: YES 1.8.1
-Pkg-config binary for 1 is cached.
-Determining dependency 'fmt' with pkg-config executable '/usr/bin/pkg-config'
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --modversion fmt` -> 0
-8.1.1
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --cflags fmt` -> 0
-
-env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --libs fmt` -> 0
--L/usr/lib -lfmt
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --libs fmt` -> 0
--lfmt
-Run-time dependency fmt found: YES 8.1.1
-Pkg-config binary for 1 is cached.
-Determining dependency 'nlohmann_json' with pkg-config executable '/usr/bin/pkg-config'
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --modversion nlohmann_json` -> 1
-
-CMake binary for 1 is cached.
-Preliminary CMake check failed. Aborting.
-Run-time dependency nlohmann_json found: NO (tried pkgconfig and cmake)
-Looking for a fallback subproject for the dependency nlohmann_json
-
-Executing subproject nlohmann_json 
-
-Project name: nlohmann_json
-Project version: 3.10.5
-C++ compiler for the host machine: c++ (gcc 12.1.0 "c++ (GCC) 12.1.0")
-C++ linker for the host machine: c++ ld.bfd 2.38
-C++ compiler for the build machine: c++ (gcc 12.1.0 "c++ (GCC) 12.1.0")
-C++ linker for the build machine: c++ ld.bfd 2.38
-Build targets in project: 2
-Subproject nlohmann_json finished.
-
-Dependency nlohmann_json found: YES 3.10.5 (overridden)
-Pkg-config binary for 1 is cached.
-Determining dependency 'opengl' with pkg-config executable '/usr/bin/pkg-config'
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --modversion opengl` -> 0
-4.5
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --cflags opengl` -> 0
-
-env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --libs opengl` -> 0
--L/usr/lib -lOpenGL
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --libs opengl` -> 0
--lOpenGL
-Run-time dependency opengl found: YES 4.5
-Pkg-config binary for 1 is cached.
-Determining dependency 'glm' with pkg-config executable '/usr/bin/pkg-config'
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --modversion glm` -> 0
-0.9.9.8
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --cflags glm` -> 0
-
-env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --libs glm` -> 0
-
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --libs glm` -> 0
-
-Run-time dependency glm found: YES 0.9.9.8
-Dependency glew found: YES 2.2.0 (cached)
-Pkg-config binary for 1 is cached.
-Determining dependency 'stb' with pkg-config executable '/usr/bin/pkg-config'
-env[PKG_CONFIG_PATH]: 
-Called `/usr/bin/pkg-config --modversion stb` -> 1
-
-CMake binary for 1 is cached.
-Preliminary CMake check failed. Aborting.
-Run-time dependency stb found: NO (tried pkgconfig and cmake)
-Looking for a fallback subproject for the dependency stb
-
-Executing subproject stb 
-
-Project name: stb
-Project version: 1.0.0
-C++ compiler for the host machine: c++ (gcc 12.1.0 "c++ (GCC) 12.1.0")
-C++ linker for the host machine: c++ ld.bfd 2.38
-C++ compiler for the build machine: c++ (gcc 12.1.0 "c++ (GCC) 12.1.0")
-C++ linker for the build machine: c++ ld.bfd 2.38
-Build targets in project: 2
-Subproject stb finished.
-
-Dependency stb found: YES 1.0.0 (overridden)
-Build targets in project: 4
-
-core-framework 0.1.0
+core-lib 0.1.0
 
   Subprojects
-    fastnoiselite: YES
-    imgui        : YES
-    micropather  : YES
-    nlohmann_json: YES
-    stb          : YES
+    imgui    : YES
+    stb      : YES
+
+  User defined options
+    buildtype: debug
 
 Found ninja-1.11.0 at /usr/bin/ninja
-Running compile:
-Working directory:  /tmp/tmpa6xedyon
-Command line:  c++ /tmp/tmpa6xedyon/testfile.cpp -o /tmp/tmpa6xedyon/output.obj -D_FILE_OFFSET_BITS=64 -c -std=c++11 
-
-Code:
- int i = static_cast<int>(0);
-Compiler stdout:
- 
-Compiler stderr:
- 
-Compiler accepts -std=c++11: YES

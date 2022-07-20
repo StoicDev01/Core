@@ -30,7 +30,12 @@ namespace scenes{
         // Executed on start
         void init(){
             // load a image from ./build/
-            core::graphics::Image sprite_image("coqueiro.jpg");
+            core::graphics::Image sprite_image("data/images/coqueiro.jpg");
+
+            if (!sprite_image.is_valid()){
+                std::cout << "Failed to load image" << std::endl;
+            }
+
             // create a texture from the image
             sprite_texture.load(sprite_image);
             // set the texture on sprite
