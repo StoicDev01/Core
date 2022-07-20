@@ -43,3 +43,13 @@
 3120	5213	1658337387730883963	src/example/Example.p/gameObject.cpp.o	c1506945583404d4
 2565	5290	1658337387807550151	src/example/Example.p/main.cpp.o	e271e7e3daeb76d0
 5290	5407	1658337387924216089	src/example/Example	ab5620892a2ab645
+23	3073	1658339821520650342	src/core/libcore-framework.so.p/system_object.cpp.o	dfdb028649677e63
+23	3104	1658339821547316905	src/core/libcore-framework.so.p/system_scene.cpp.o	700d0d3467500293
+23	3556	1658339822003981823	src/core/libcore-framework.so.p/graphics_texture.cpp.o	b152bb420de34305
+22	3787	1658339822233980942	src/core/libcore-framework.so.p/graphics_sprite.cpp.o	764ae6831e48e32d
+23	3815	1658339822263980827	src/core/libcore-framework.so.p/graphics_window.cpp.o	2fe7f7e091a166cd
+24	4044	1658339822490646624	src/example/Example.p/main.cpp.o	e271e7e3daeb76d0
+3815	4597	1658339823043977838	src/core/libcore-framework.so	75cc4f444413c25f
+3073	5412	1658339823860641373	src/example/Example.p/gameObject.cpp.o	c1506945583404d4
+4597	12915	1658339831287279523	src/core/libcore-framework.so.p/libcore-framework.so.symbols	f4051252f77e4c92
+12915	13426	1658339831873943934	src/example/Example	ab5620892a2ab645

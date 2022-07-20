@@ -1,5 +1,4 @@
 #include "thread"
-#include "X11/Xlib.h"
 #include "time.h"
 
 #include "../core/graphics/window.h"
