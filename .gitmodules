@@ -1,0 +1,3 @@
+[submodule "subprojects/glfw-meson"]
+	path = subprojects/glfw-meson
+	url = https://github.com/swarnimarun/glfw-meson.git

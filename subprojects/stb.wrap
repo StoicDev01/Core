@@ -1,0 +1,5 @@
+[wrap-file]
+directory=stb
+
+[provide]
+stb=stb_dep

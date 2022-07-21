@@ -1,0 +1,13 @@
+[wrap-file]
+directory = glew-2.2.0
+source_url = http://downloads.sourceforge.net/glew/glew-2.2.0.tgz
+source_filename = glew-2.2.0.tgz
+source_hash = d4fc82893cfb00109578d0a1a2337fb8ca335b3ceccf97b97e5cc7f08e4353e1
+patch_filename = glew_2.2.0-1_patch.zip
+patch_url = https://wrapdb.mesonbuild.com/v2/glew_2.2.0-1/get_patch
+patch_hash = 2775568e65a72fa7a5a6fafc9066cb88be91638f8a5ca99a02b90a3d82c0e7f2
+wrapdb_version = 2.2.0-1
+
+[provide]
+glew = glew_dep
+

@@ -7,7 +7,7 @@ project(
 )
 
 # Dependencies
-glfw_dep            =   dependency('glfw3')
+glfw_dep            =   dependency('glfw')
 glew_dep            =   dependency('glew')
 threads_dep         =   dependency('threads')
 fmt_dep             =   dependency('fmt')
