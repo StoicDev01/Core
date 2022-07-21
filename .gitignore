@@ -1,7 +1,5 @@
 build/src/*
 build/subprojects/*
-subprojects/packagecache
-subprojects/imgui-1.87
-subprojects/fmt-9.0.0
-subprojects/glew-2.2.0
-subprojects/glm-0.9.9.8
+subprojects/*
+!subprojects/stb-meson
+!subprojects/*.wrap

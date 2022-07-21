@@ -1,5 +1,7 @@
-[wrap-file]
-directory=glfw-meson
+[wrap-git]
+url=https://github.com/swarnimarun/glfw-meson.git
+revision = 3.3-stable-meson
+depth = 1
 
 [provide]
 glfw=glfw_dep
