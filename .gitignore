@@ -1,5 +1,5 @@
 build/src/*
 build/subprojects/*
 subprojects/*
-!subprojects/stb-meson
+!subprojects/stb-meson--
 !subprojects/*.wrap
