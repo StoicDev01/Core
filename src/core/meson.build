@@ -10,7 +10,8 @@ dependencies = [
     glm_dep,
     glfw_dep,
     glew_dep,
-    imgui_dep
+    imgui_dep,
+    stb_dep
 ]
 
 lib_inc = include_directories('.','gl','graphics','system')

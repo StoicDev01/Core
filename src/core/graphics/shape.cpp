@@ -37,7 +37,7 @@ namespace core::graphics{
             -0.5f,  0.5f,  0.0f,  0.0f, 1.0f     // top left
         };
 
-        uint element_buffer_data[] {
+        uint32_t element_buffer_data[] {
             0, 1, 3,
             1, 2, 3
         };

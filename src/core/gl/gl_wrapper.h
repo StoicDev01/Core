@@ -15,10 +15,10 @@ namespace core::gl{
     class GLObjectWithID{
         public:
 
-        uint get_id();
+        uint32_t get_id();
 
         protected:
-        uint m_id;
+        uint32_t m_id;
     };
 
     class GLObjectWithBind{
@@ -45,7 +45,7 @@ namespace core::gl{
         ~VertexBuffer();
 
         void set_data(float* vertex_buffer_data, size_t size, GLenum usage = GL_STATIC_DRAW);
-        void set_data(uint* vertex_buffer_data, size_t size, GLenum usage = GL_STATIC_DRAW);
+        void set_data(uint32_t* vertex_buffer_data, size_t size, GLenum usage = GL_STATIC_DRAW);
 
         void bind();
         void unbind();
@@ -82,7 +82,7 @@ namespace core::gl{
         ~ShaderProgram();
 
         void attach(Shader& shader);
-        void detach_id(uint shader_id);
+        void detach_id(uint32_t shader_id);
         void detach(Shader& shader);
         void detach_all();
 
@@ -90,6 +90,6 @@ namespace core::gl{
         void use();
 
         private:
-        std::vector<uint> m_attached_shaders;
+        std::vector<uint32_t> m_attached_shaders;
     };
 }

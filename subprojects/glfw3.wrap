@@ -4,4 +4,4 @@ revision = 3.3-stable-meson
 depth = 1
 
 [provide]
-glfw=glfw_dep
+glfw3=glfw_dep

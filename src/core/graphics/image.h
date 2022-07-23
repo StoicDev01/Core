@@ -1,5 +1,9 @@
 #pragma once
 
+#include <locale>
+#include <codecvt>
+#include <string>
+
 #include "glm/vec2.hpp"
 #include "filesystem"
 #include "fmt/format.h"
@@ -8,8 +12,12 @@
 #include "../system/core_utils.h"
 #include "../system/transform.h"
 
-#include "stb/stb_image.h"
-#include "stb/stb_image_write.h"
+#if defined(__MINGW32__)
+#define STBI_WINDOWS_UTF8
+#endif
+
+#include "stb_image.h"
+#include "stb_image_write.h"
 
 namespace core::graphics {
 

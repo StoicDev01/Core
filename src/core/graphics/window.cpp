@@ -155,7 +155,7 @@ namespace core::graphics{
     Vector2u Window::get_size(){
         int width, height;
         glfwGetWindowSize(m_glfw_window, &width, &height);
-        Vector2u size((uint)width, (uint)height);
+        Vector2u size((uint32_t)width, (uint32_t)height);
         return size;
     }
 

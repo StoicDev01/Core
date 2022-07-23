@@ -10,8 +10,7 @@
                 "${workspaceFolder}/src/core/system",
                 "${workspaceFolder}/src/core/graphics",
                 "${workspaceFolder}/src/example/*",
-                "${workspaceFolder}/subprojects/*",
-                "${workspaceFolder}/subprojects/imgui-1.87"
+                "${workspaceFolder}/subprojects/*"
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": false,
@@ -25,7 +24,40 @@
             "compilerPath": "/usr/bin/g++",
             "cStandard": "c17",
             "cppStandard": "c++20",
-            "intelliSenseMode": "linux-gcc-x64",
+            "intelliSenseMode": "linux-gcc-x86",
+            "configurationProvider": "ms-vscode.makefile-tools",
+            "compilerArgs": []
+        },
+        {
+            "name": "Windows",
+            "includePath": [
+                "${default}",
+                "${workspaceFolder}/src/*",
+                "${workspaceFolder}/src/core/*",
+                "${workspaceFolder}/src/core/gl",
+                "${workspaceFolder}/src/core/system",
+                "${workspaceFolder}/src/core/graphics",
+                "${workspaceFolder}/src/example/*",
+                "${workspaceFolder}/subprojects/fmt-9.0.0/include",
+                "${workspaceFolder}/subprojects/glew-2.2.0/include",
+                "${workspaceFolder}/subprojects/glfw/include",
+                "${workspaceFolder}/subprojects/glm-0.9.9.8",
+                "${workspaceFolder}/subprojects/imgui-1.87",
+                "${workspaceFolder}/subprojects/stb-meson"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": false,
+                "path": [
+                    "${default}",
+                    "${workspaceFolder}/src/*"
+                ]
+
+            },
+            "defines": [],
+            "compilerPath": "/bin/x86_64-w64-mingw32-g++",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "windows-gcc-x86",
             "configurationProvider": "ms-vscode.makefile-tools",
             "compilerArgs": []
         }

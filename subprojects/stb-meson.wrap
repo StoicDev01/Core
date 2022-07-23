@@ -2,4 +2,4 @@
 directory=stb-meson
 
 [provide]
-stb=stb_dep
+stb-meson=stb_dep

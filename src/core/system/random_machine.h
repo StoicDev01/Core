@@ -13,7 +13,7 @@ namespace core{
         RandomMachine();
 
         int rand_int(int min, int max);
-        uint rand_uint(uint min, uint max);
+        uint32_t rand_uint(uint32_t min, uint32_t max);
         float rand_float(float min, float max);
         double rand_double(double min, double max);
 

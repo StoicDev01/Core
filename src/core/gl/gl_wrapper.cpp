@@ -2,7 +2,7 @@
 
 namespace core::gl{
     
-    uint GLObjectWithID::get_id(){
+    uint32_t GLObjectWithID::get_id(){
         return m_id;
     }
 
@@ -48,7 +48,7 @@ namespace core::gl{
         glBufferData(m_buffer_type, size, vertex_buffer_data, usage);
     }
 
-    void VertexBuffer::set_data(uint* vertex_buffer_data, size_t size, GLenum usage ){
+    void VertexBuffer::set_data(uint32_t* vertex_buffer_data, size_t size, GLenum usage ){
         bind();
         glBufferData(m_buffer_type, size, vertex_buffer_data, usage);
     }
@@ -151,9 +151,9 @@ namespace core::gl{
         m_attached_shaders.push_back(shader.get_id());
     }
 
-    void ShaderProgram::detach_id(uint shader_id){
+    void ShaderProgram::detach_id(uint32_t shader_id){
         bool attached_shader = false;
-        std::vector<uint>::iterator shader_iterator;
+        std::vector<uint32_t>::iterator shader_iterator;
 
         // verify if has id attached
         for (auto shader = m_attached_shaders.begin(); shader != m_attached_shaders.end(); shader++){

@@ -4,6 +4,7 @@
 #include "glm/gtx/quaternion.hpp"
 #include "glm/gtc/quaternion.hpp"
 #include "vector"
+#include "cstdint"
 
 namespace core{
     template <size_t size_x, size_t size_y, typename T>
@@ -11,11 +12,11 @@ namespace core{
 
     };
 
-    typedef glm::vec<3, uint, glm::defaultp>    Vector3u;
+    typedef glm::vec<3, uint32_t, glm::defaultp>    Vector3u;
     typedef glm::vec<3, int, glm::defaultp>     Vector3i;
     typedef glm::vec<3, float, glm::defaultp>   Vector3f;
 
-    typedef glm::vec<2, uint, glm::defaultp>    Vector2u;
+    typedef glm::vec<2, uint32_t, glm::defaultp>    Vector2u;
     typedef glm::vec<2, int, glm::defaultp>     Vector2i;
     typedef glm::vec<2, float, glm::defaultp>   Vector2f;
 

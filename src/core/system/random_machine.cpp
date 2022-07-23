@@ -13,8 +13,8 @@ namespace core{
         return dist(rng);
     }
 
-    uint RandomMachine::rand_uint(uint min, uint max){
-        std::uniform_int_distribution<uint> dist(min, max);
+    uint32_t RandomMachine::rand_uint(uint32_t min, uint32_t max){
+        std::uniform_int_distribution<uint32_t> dist(min, max);
         return dist(rng);
     }
 

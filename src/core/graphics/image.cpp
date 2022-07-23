@@ -1,5 +1,7 @@
 #include "image.h"
-#include "../system/transform.h"
+
+
+
 
 namespace core::graphics{
 
@@ -41,10 +43,20 @@ namespace core::graphics{
         int size_y;
 
         stbi_set_flip_vertically_on_load(true);  
-        m_data = stbi_load(path.c_str(), &size_x, &size_y, &m_color_channels, 3);
 
-        m_size.x = (uint)size_x;
-        m_size.y = (uint)size_y;
+        #ifdef __MINGW32__
+            // convert windows wide char to stbi compatible char
+            const wchar_t* path_utf16 = path.c_str();
+            std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
+            std::string utf8_path = converter.to_bytes(path.c_str());
+
+            m_data = stbi_load(utf8_path.c_str(), &size_x, &size_y, &m_color_channels, 3);
+        #else
+            m_data = stbi_load(path.c_str(), &size_x, &size_y, &m_color_channels, 3);
+        #endif
+
+        m_size.x = (uint32_t)size_x;
+        m_size.y = (uint32_t)size_y;
     }
 
     Image::~Image(){
@@ -55,7 +67,8 @@ namespace core::graphics{
     // FIX ME: allow other image formats
     void Image::save(std::filesystem::path p_path){
         stbi_flip_vertically_on_write(true);
-        stbi_write_png(p_path.c_str(), m_size.x, m_size.y, m_color_channels, m_data, m_size.x * m_color_channels);
+        //stbi_write_png_to_func()
+        //stbi_write_png(p_path.c_str(), m_size.x, m_size.y, m_color_channels, m_data, m_size.x * m_color_channels);
     }
 
     void Image::set_pixel(core::Vector2u pixel_pos, Color color){
