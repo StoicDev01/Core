@@ -2,6 +2,8 @@ build/src/*
 build/subprojects/*
 build-mingw/src/*
 build-mingw/subprojects/*
+!build
+!build-mingw
 subprojects/*
 !subprojects/stb-meson
 !subprojects/*.wrap
