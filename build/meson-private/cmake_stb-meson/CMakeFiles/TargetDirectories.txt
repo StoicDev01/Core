@@ -1,2 +1,0 @@
-/home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/cmake_stb-meson/CMakeFiles/edit_cache.dir
-/home/izkeas/Projects/C-C++/games/core_framework/build/meson-private/cmake_stb-meson/CMakeFiles/rebuild_cache.dir

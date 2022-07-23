@@ -1,0 +1,1 @@
+{"version": "0.1.0", "descriptive_name": "core-lib", "subproject_dir": "subprojects", "subprojects": [{"name": "stb-meson", "version": "1.0.0", "descriptive_name": "stb"}, {"name": "imgui", "version": "1.87", "descriptive_name": "imgui"}]}
