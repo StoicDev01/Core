@@ -1,4 +1,4 @@
-Build started at 2022-07-23T18:02:26.526236
+Build started at 2022-07-23T19:30:16.231933
 Main binary: /usr/bin/python
 Build Options: -Dimgui:dx9=disabled -Dimgui:dx10=disabled -Dimgui:dx11=disabled -Dbackend=ninja -Dimgui:dx12=disabled -Dimgui:glfw=enabled -Dimgui:opengl=enabled -Ddefault_library=static -Dlayout=mirror -Dstb-meson:default_library=static -Dimgui:default_library=static -Dglm:default_library=static -Dglfw3:default_library=static -Dfmt:default_library=static -Dglew:default_library=static '--cross-file /home/izkeas/Projects/C-C++/games/core_framework/mingw_settings.txt'
 Python system: Linux
@@ -45,8 +45,8 @@ C linker for the host machine: x86_64-w64-mingw32-gcc ld.bfd 2.38
 C compiler for the build machine: cc (gcc 12.1.0 "cc (GCC) 12.1.0")
 C linker for the build machine: cc ld.bfd 2.38
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpf1i30cki
-Command line:  x86_64-w64-mingw32-gcc /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpf1i30cki/testfile.c -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpf1i30cki/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lm -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpuc2wqv_m
+Command line:  x86_64-w64-mingw32-gcc /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpuc2wqv_m/testfile.c -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpuc2wqv_m/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lm -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(void) { return 0; }
@@ -57,8 +57,8 @@ Compiler stderr:
  
 Library m found: YES
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpv43a4i3u
-Command line:  x86_64-w64-mingw32-gcc /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpv43a4i3u/testfile.c -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpv43a4i3u/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lrt -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpe_ks182w
+Command line:  x86_64-w64-mingw32-gcc /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpe_ks182w/testfile.c -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpe_ks182w/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lrt -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(void) { return 0; }
@@ -73,8 +73,8 @@ Library rt found: NO
 Dependency threads found: YES unknown (cached)
 Configuring glfw_config.h using configuration
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpk514liw0
-Command line:  x86_64-w64-mingw32-gcc /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpk514liw0/testfile.c -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpk514liw0/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lgdi32 -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpbdcujyhu
+Command line:  x86_64-w64-mingw32-gcc /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpbdcujyhu/testfile.c -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpbdcujyhu/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lgdi32 -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(void) { return 0; }
@@ -104,8 +104,8 @@ C linker for the host machine: x86_64-w64-mingw32-gcc ld.bfd 2.38
 C compiler for the build machine: cc (gcc 12.1.0 "cc (GCC) 12.1.0")
 C linker for the build machine: cc ld.bfd 2.38
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmp1rb1ht8c
-Command line:  x86_64-w64-mingw32-gcc /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmp1rb1ht8c/testfile.c -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmp1rb1ht8c/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lopengl32 -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmp0yhj5qdt
+Command line:  x86_64-w64-mingw32-gcc /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmp0yhj5qdt/testfile.c -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmp0yhj5qdt/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lopengl32 -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(void) { return 0; }
@@ -196,8 +196,8 @@ Library d3d10 skipped: feature dx10 disabled
 Library d3d11 skipped: feature dx11 disabled
 Library d3d12 skipped: feature dx12 disabled
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpqnzvdd_z
-Command line:  x86_64-w64-mingw32-g++ /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpqnzvdd_z/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpqnzvdd_z/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -framework Foundation 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmp9e07by2e
+Command line:  x86_64-w64-mingw32-g++ /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmp9e07by2e/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmp9e07by2e/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -framework Foundation 
 
 Code:
  int main(void) { return 0; }
@@ -207,8 +207,8 @@ Compiler stderr:
  x86_64-w64-mingw32-g++: error: unrecognized command-line option '-framework'
 
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpka2z_7vh
-Command line:  x86_64-w64-mingw32-g++ /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpka2z_7vh/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpka2z_7vh/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -framework AppKit 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpte17dyyj
+Command line:  x86_64-w64-mingw32-g++ /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpte17dyyj/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpte17dyyj/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -framework AppKit 
 
 Code:
  int main(void) { return 0; }
@@ -218,8 +218,8 @@ Compiler stderr:
  x86_64-w64-mingw32-g++: error: unrecognized command-line option '-framework'
 
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmps_xvdulc
-Command line:  x86_64-w64-mingw32-g++ /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmps_xvdulc/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmps_xvdulc/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -framework GameController 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmppqv3ozn3
+Command line:  x86_64-w64-mingw32-g++ /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmppqv3ozn3/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmppqv3ozn3/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -framework GameController 
 
 Code:
  int main(void) { return 0; }
@@ -229,8 +229,8 @@ Compiler stderr:
  x86_64-w64-mingw32-g++: error: unrecognized command-line option '-framework'
 
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpljvs6fhk
-Command line:  x86_64-w64-mingw32-g++ /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpljvs6fhk/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpljvs6fhk/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -framework Metal 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpq716yhnu
+Command line:  x86_64-w64-mingw32-g++ /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpq716yhnu/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpq716yhnu/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -framework Metal 
 
 Code:
  int main(void) { return 0; }
@@ -241,8 +241,8 @@ Compiler stderr:
 
 Run-time dependency appleframeworks found: NO (tried framework)
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpcetn_sn0
-Command line:  x86_64-w64-mingw32-g++ /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpcetn_sn0/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpcetn_sn0/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -Wl,--start-group -ldl -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmphx5kqjwe
+Command line:  x86_64-w64-mingw32-g++ /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmphx5kqjwe/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmphx5kqjwe/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -Wl,--start-group -ldl -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(void) { return 0; }
@@ -261,8 +261,8 @@ Run-time dependency sdl2 found: NO (tried pkgconfig and config-tool)
 Pkg-config binary for 1 is cached as not found.
 Pkg-config binary for machine 1 not found. Giving up.
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpmwah3ruw
-Command line:  x86_64-w64-mingw32-g++ /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpmwah3ruw/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpmwah3ruw/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -Wl,--start-group -lvulkan -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpwege_3e2
+Command line:  x86_64-w64-mingw32-g++ /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpwege_3e2/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpwege_3e2/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -Wl,--start-group -lvulkan -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(void) { return 0; }
@@ -394,8 +394,8 @@ Cached compiler stdout:
 Cached compiler stderr:
  
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmp2j_q9gw_
-Command line:  x86_64-w64-mingw32-g++ /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmp2j_q9gw_/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmp2j_q9gw_/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive --print-search-dirs 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmp_zyr3bs2
+Command line:  x86_64-w64-mingw32-g++ /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmp_zyr3bs2/testfile.cpp -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmp_zyr3bs2/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive --print-search-dirs 
 
 Code:
  
@@ -408,8 +408,8 @@ Compiler stderr:
  
 Run-time dependency vulkan found: NO (tried pkgconfig and system)
 Running compile:
-Working directory:  /tmp/tmplzpsy76q
-Command line:  x86_64-w64-mingw32-g++ /tmp/tmplzpsy76q/testfile.cpp -o /tmp/tmplzpsy76q/output.obj -D_FILE_OFFSET_BITS=64 -c -std=c++20 
+Working directory:  /tmp/tmpx8bud3b4
+Command line:  x86_64-w64-mingw32-g++ /tmp/tmpx8bud3b4/testfile.cpp -o /tmp/tmpx8bud3b4/output.obj -D_FILE_OFFSET_BITS=64 -c -std=c++20 
 
 Code:
  int i = static_cast<int>(0);
@@ -446,8 +446,8 @@ Default target is not allowed for cross use
 sdl2-config found: NO
 Run-time dependency sdl2 found: NO (tried pkgconfig and config-tool)
 Running compile:
-Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpcbnla0od
-Command line:  x86_64-w64-mingw32-gcc /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpcbnla0od/testfile.c -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmpcbnla0od/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -ldwmapi -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmp1t3750e7
+Command line:  x86_64-w64-mingw32-gcc /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmp1t3750e7/testfile.c -o /home/izkeas/Projects/C-C++/games/core_framework/build-mingw/meson-private/tmp1t3750e7/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -ldwmapi -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(void) { return 0; }
@@ -503,8 +503,8 @@ core-lib 0.1.0
 
 Found ninja-1.11.0 at /usr/bin/ninja
 Running compile:
-Working directory:  /tmp/tmprbqdkl96
-Command line:  x86_64-w64-mingw32-g++ /tmp/tmprbqdkl96/testfile.cpp -o /tmp/tmprbqdkl96/output.obj -D_FILE_OFFSET_BITS=64 -c -std=c++14 
+Working directory:  /tmp/tmp383v361n
+Command line:  x86_64-w64-mingw32-g++ /tmp/tmp383v361n/testfile.cpp -o /tmp/tmp383v361n/output.obj -D_FILE_OFFSET_BITS=64 -c -std=c++14 
 
 Code:
  int i = static_cast<int>(0);
