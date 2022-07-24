@@ -22,12 +22,22 @@ A game framework with 2D and 3D capabilities
 ## Build
 this project uses meson as build system, to build do the following:
 
+### Linux
+
         meson setup build
         meson compile -C build
 
 Meson will download all required libraries and compile, then run the example with:
 
         ./build/src/example/Example
+
+### Windows
+
+windows needs dlfcn-win32, download and install [dlfcn-win32](https://github.com/dlfcn-win32/dlfcn-win32)
+
+        meson setup build-mingw --cross-file mingw_cross.txt
+        meson compile -C build-mingw
+        ./build-mingw/src/example/Example.exe
 
 if everything went well, you will see a white place with a rotating image approaching
 
