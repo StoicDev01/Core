@@ -1,5 +1,0 @@
-[wrap-file]
-directory=stb-meson
-
-[provide]
-stb-meson=stb_dep

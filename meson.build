@@ -26,7 +26,7 @@ endif
 
 glm_dep             =   dependency('glm')
 glew_dep            =   dependency('glew')
-stb_dep             =   dependency('stb-meson')
+stb_dep             =   dependency('stb')
 imgui_dep           =   dependency('imgui')
 
 
