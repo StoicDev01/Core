@@ -4,5 +4,6 @@ subprojects/*
 
 !subprojects/packagefiles
 
+build/
 linux-build/
 linux-build-mingw/
