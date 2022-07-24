@@ -1,7 +1,7 @@
 [binaries]
 c = 'x86_64-w64-mingw32-gcc'
 cpp = 'x86_64-w64-mingw32-g++'
-ar = 'x86_64-w64-mingw32-ar'
+ar = ['x86_64-w64-mingw32-gcc-ar', 'b']
 strip = 'x86_64-w64-mingw32-strip'
 exe_wrapper = 'wine64'
 windres = 'x86_64-w64-mingw32-windres'
@@ -11,3 +11,11 @@ system = 'windows'
 cpu_family = 'x86_64'
 cpu = 'x86_64'
 endian = 'little'
+
+[imgui:project options]
+dx9= 'disabled'
+dx10= 'disabled'
+dx11= 'disabled'
+dx12= 'disabled'
+opengl = 'enabled'
+
