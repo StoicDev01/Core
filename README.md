@@ -33,7 +33,7 @@ Meson will download all required libraries and compile, then run the example wit
 
 ### Windows
 
-windows needs dlfcn-win32, download and install [dlfcn-win32](https://github.com/dlfcn-win32/dlfcn-win32)
+windows needs mingw, download and install [mingw](https://github.com/niXman/mingw-builds-binaries/releases), select the x86_64 posix sjlj
 
         meson setup build-mingw --cross-file mingw_cross.txt
         meson compile -C build-mingw
