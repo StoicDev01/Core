@@ -2,4 +2,7 @@ subprojects/*
 !subprojects/stb-meson
 !subprojects/*.wrap
 
-build/
+!subprojects/packagefiles
+
+linux-build/
+linux-build-mingw/
