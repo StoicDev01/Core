@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 lib_inc = include_directories('.','gl','graphics','system')
-dep_inc = include_directories('.')
+dep_inc = include_directories('../')
 
 sources = glwrapper_sources + graphics_sources + system_sources
 

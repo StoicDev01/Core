@@ -19,6 +19,4 @@ namespace core{
             return min <= value && value <= max;
         }
     };
-
-    typedef Range<int> Damage;
 }
