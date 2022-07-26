@@ -19,9 +19,12 @@ namespace core::graphics {
         void unbind();
 
         void load(Image& image);
+        
+        core::Vector2u get_size();
 
         protected:
         bool m_loaded = false;
+        core::Vector2u m_size;
 
     };
 

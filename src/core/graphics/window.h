@@ -13,6 +13,7 @@
 #include "image.h"
 #include "../system/core_utils.h"
 #include "../system/transform.h"
+#include "../system/data.h"
 #include "cstdint"
 
 namespace core::graphics{

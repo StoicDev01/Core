@@ -22,5 +22,10 @@ namespace core::graphics{
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image.m_size.x, image.m_size.y, 0, GL_RGB, GL_UNSIGNED_BYTE, image.get_data());
         glGenerateMipmap(GL_TEXTURE_2D);
         m_loaded = true;
+        m_size = image.m_size;
+    }
+
+    core::Vector2u Texture::get_size(){
+        return m_size;
     }
 }
