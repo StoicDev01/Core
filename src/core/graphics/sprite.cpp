@@ -23,6 +23,8 @@ namespace core::graphics {
 
     void Sprite::set_texture(Texture& p_texture){
         m_texture = &p_texture;
+        core::Vector2u texture_size = p_texture.get_size();
+        m_scale = core::Vector3f(texture_size.x, texture_size.y, 1);
     }
 
     void Sprite::draw(){

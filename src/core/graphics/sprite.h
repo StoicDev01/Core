@@ -27,7 +27,5 @@ namespace core::graphics{
         core::gl::ShaderProgram m_shader_program;
         core::gl::Shader m_vertex_shader;
         core::gl::Shader m_fragment_shader;
-
-        bool size_changed = false;
     };
 }
