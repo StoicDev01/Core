@@ -22,7 +22,7 @@ namespace scenes{
         ExampleScene(core::graphics::Window& window):
             Scene (window, "Example Scene"),
             view_2d(-2.0f, +2.0f, -1.5f, +1.5f, 0.1f, 100.0f),
-            view_3d(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 100.0f)
+            view_3d(glm::radians(45.0f), 1600.0f / 900.0f, 0.1f, 100.0f)
         {
 
         }
@@ -40,11 +40,15 @@ namespace scenes{
             sprite_texture.load(sprite_image);
             // set the texture on sprite
             example_sprite.set_texture(sprite_texture);
+            // set sprite scale
+            example_sprite.m_scale = core::Vector3f(
+                example_sprite.m_scale.x / 32, example_sprite.m_scale.y / 32, 1
+            );
 
             // create a view that contains a projection and view matrices
             example_sprite.m_position = core::Vector3f(0,0,0);
-            view_2d.m_position = core::Vector3f(0,0,-10);
-            view_3d.m_position = core::Vector3f(0,0,-10);
+            view_2d.m_position = core::Vector3f(0,0,-100);
+            view_3d.m_position = core::Vector3f(0,0,-100);
         }
 
         // Executed on client handle event
@@ -58,14 +62,18 @@ namespace scenes{
                 // toggle 2D or 3D
                 is_2d = !is_2d;
             }
+
+            if (m_window.is_key_pressed(GLFW_KEY_B)){
+                core::Vector2f mouse_pos = m_window.get_mouse_pos();
+                fmt::print("MOUSE AT: ({}, {})", mouse_pos.x, mouse_pos.y);
+                endl();
+            }
         }
 
         // Executed on logic update
         void update(float delta){
             // rotate the sprite
-
             example_sprite.rotate(4.0f * delta, core::Vector3f(1,0,0));
-
 
             if (is_2d){
 
