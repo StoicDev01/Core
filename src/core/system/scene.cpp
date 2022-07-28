@@ -14,7 +14,7 @@ namespace core{
     void Scene::init(){
     }
 
-    void Scene::handle_event(float delta){
+    void Scene::handle_event(core::Event event){
         // do something
     }
 

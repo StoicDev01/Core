@@ -1,6 +1,7 @@
 #pragma once
 #include "core_utils.h"
 #include "../graphics/window.h"
+#include "events.h"
 
 namespace core{
     class Scene{
@@ -10,7 +11,7 @@ namespace core{
         ~Scene();
         
         virtual void init();
-        virtual void handle_event(float delta);
+        virtual void handle_event(core::Event event);
         virtual void update(float delta);
         virtual void draw(core::graphics::Window& window);
         

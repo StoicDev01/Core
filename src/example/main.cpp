@@ -1,8 +1,7 @@
 #include "thread"
 #include "time.h"
 
-#include "../core/graphics/window.h"
-#include "../core/system/data.h"
+#include "core/core.h"
 
 #include "example_scene.h"
 #include "gameObject.h"
@@ -43,13 +42,16 @@ void client(core::graphics::Window& window){
         end = std::clock();
 
         core::Scene* current_scene = gameObject.getCurrentScene();
+        core::Event event;
+
         glfwPollEvents();
 
-        if (window.get_key(GLFW_KEY_ESCAPE) == GLFW_PRESS){
-            window.close();
-        }
         // handle event
-        current_scene->handle_event(delta);
+        while (window.poll_event(event)){
+            current_scene->handle_event(event); 
+            
+            core::free_event(event);
+        }
 
         // Render
         window.new_frame();

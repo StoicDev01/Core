@@ -9,6 +9,7 @@ dependencies = [
     gl_dep,
     glm_dep,
     glfw_dep,
+    gleq_dep,
     glew_dep,
     imgui_dep,
     stb_dep

@@ -1,5 +1,6 @@
 #include "../core/system/scene.h"
 #include "../core/system/transform.h"
+#include "../core/system/events.h"
 
 #include "../core/graphics/sprite.h"
 #include "../core/graphics/view.h"
@@ -52,21 +53,19 @@ namespace scenes{
         }
 
         // Executed on client handle event
-        void handle_event(float delta){
-            if (m_window.is_key_pressed(GLFW_KEY_A)){
-                fmt::print("You Pressed The A Key!!");
-                endl();
-            }
+        void handle_event(core::Event event){
 
-            if (m_window.is_key_pressed(GLFW_KEY_SPACE)){
-                // toggle 2D or 3D
-                is_2d = !is_2d;
-            }
+            if (event.type == GLEQ_KEY_PRESSED){
 
-            if (m_window.is_key_pressed(GLFW_KEY_B)){
-                core::Vector2f mouse_pos = m_window.get_mouse_pos();
-                fmt::print("MOUSE AT: ({}, {})", mouse_pos.x, mouse_pos.y);
-                endl();
+                if ( event.keyboard.key == GLFW_KEY_A){
+                    fmt::print("You Pressed The A Key!!");
+                    endl();
+                }
+
+                if (event.keyboard.key == GLFW_KEY_SPACE){
+                    // toggle 2D or 3D
+                    is_2d = !is_2d;
+                }
             }
         }
 

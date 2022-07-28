@@ -14,6 +14,7 @@ host_system = host_machine.system()
 
 # Dependencies
 glfw_dep            =   dependency('glfw3')
+gleq_dep            =   dependency('gleq')
 glew_dep            =   dependency('glew')
 threads_dep         =   dependency('threads')
 fmt_dep             =   dependency('fmt')

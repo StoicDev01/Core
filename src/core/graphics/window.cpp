@@ -5,7 +5,8 @@ namespace core::graphics{
 
     Window::Window(int width, int height, const char* name){
         glfwSetErrorCallback(glfw_error_callback);
-        glfwInit();
+        glfwInit(); // init glfw
+        gleqInit(); // init gleq
 
         glfwWindowHint(GLFW_SAMPLES, 4);
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -14,6 +15,8 @@ namespace core::graphics{
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
         m_glfw_window = glfwCreateWindow(width, height, name, NULL, NULL);
+        gleqTrackWindow(m_glfw_window);
+
         glfwSetInputMode(m_glfw_window, GLFW_STICKY_KEYS, GL_TRUE);
         m_open = true;
     }
@@ -127,30 +130,6 @@ namespace core::graphics{
 
     GLFWwindow* Window::get_glfw_window(){
         return m_glfw_window;
-    }
-
-    int Window::get_key(int glfw_key){
-        return glfwGetKey(m_glfw_window, glfw_key);
-    }
-
-    int Window::get_mouse_button(int glfw_mouse_button){
-        return glfwGetMouseButton(m_glfw_window, glfw_mouse_button);
-    }
-
-    bool Window::is_key_pressed(int glfw_key){
-        return (get_key(glfw_key) == GLFW_PRESS);
-    }
-
-    bool Window::is_key_released(int glfw_key){
-        return (get_key(glfw_key) == GLFW_RELEASE);
-    }
-
-    bool Window::is_mouse_button_pressed(int glfw_mouse_button){
-        return (get_mouse_button(glfw_mouse_button) == GLFW_PRESS);
-    }
-
-    bool Window::is_mouse_button_released(int glfw_mouse_button){
-        return (get_mouse_button(glfw_mouse_button) == GLFW_RELEASE);
     }
 
     Vector2u Window::get_size(){

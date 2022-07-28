@@ -14,6 +14,7 @@
 #include "../system/core_utils.h"
 #include "../system/transform.h"
 #include "../system/data.h"
+#include "../system/events.h"
 #include "cstdint"
 
 namespace core::graphics{
@@ -45,18 +46,14 @@ namespace core::graphics{
 
         GLFWwindow* get_glfw_window();
 
-        int get_key(int glfw_key);
-        int get_mouse_button(int glfw_mouse_button);
-
-        bool is_key_pressed(int glfw_key);
-        bool is_key_released(int glfw_key);
-
-        bool is_mouse_button_pressed(int glfw_mouse_button);
-        bool is_mouse_button_released(int glfw_mouse_button);
-
         Vector2u get_size();
         core::Vector2f get_mouse_pos();
         core::Vector2f screen_to_world_pos(core::Vector2f screen_pos);
+
+        inline int poll_event(core::Event& event){
+            gleqTrackWindow(m_glfw_window);
+            return gleqNextEvent(&event);
+        }
 
         private:
         
