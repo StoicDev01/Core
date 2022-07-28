@@ -1,4 +1,5 @@
 #include "window.h"
+#include "data.h"
 
 namespace core::graphics{
 
@@ -163,6 +164,20 @@ namespace core::graphics{
         double x, y;
         glfwGetCursorPos(m_glfw_window, &x, &y);
         return core::Vector2f((float)x, (float)y);
+    };
+
+    core::Vector2f Window::screen_to_world_pos(core::Vector2f screen_pos){ 
+        core::Vector2u window_size = get_size();
+        core::Matrix4f& active_view = core::view_matrix;
+        core::Matrix4f& active_projection = core::projection_matrix;
+
+        float x = 2.0 * screen_pos.x / window_size.x - 1.0;
+        float y = -2.0 * screen_pos.y / window_size.y + 1.0;
+
+        glm::mat4 view_projection_inverse = glm::inverse(active_projection * active_view);
+        glm::vec4 world_space_position(x, y, 0.0f, 1.0f);
+
+        return view_projection_inverse * world_space_position;
     };
 
     void Window::glfw_error_callback(int error, const char* description){
