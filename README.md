@@ -14,7 +14,6 @@ A game framework with 2D and 3D capabilities
 ## Planned Features
 - 2D and 3D shapes like cube, circle, sphere, triangle, etc
 - make imgui be optional
-- event handling system
 - cross platform
 - pathfinding
 - noise generation
@@ -43,6 +42,7 @@ if everything went well, you will see a white place with a rotating image approa
 
 ## Core uses the following libraries:
 - glfw to create windows and manage input
+- gleq as event handling system
 - glew to use opengl
 - glm to do the math
 - stb to load and save images
