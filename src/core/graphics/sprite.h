@@ -21,7 +21,7 @@ namespace core::graphics{
         void draw();
         
         protected:
-        Shape m_shape;
+        core::ShapeData m_shape;
         Texture* m_texture;
 
         core::gl::ShaderProgram m_shader_program;

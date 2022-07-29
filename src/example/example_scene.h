@@ -22,8 +22,8 @@ namespace scenes{
 
         ExampleScene(core::graphics::Window& window):
             Scene (window, "Example Scene"),
-            view_2d(-2.0f, +2.0f, -1.5f, +1.5f, 0.1f, 100.0f),
-            view_3d(glm::radians(45.0f), 1600.0f / 900.0f, 0.1f, 100.0f)
+            view_2d(-(1600.0f/ 2.0), (1600.0f / 2.0f), -(900.0f / 2.0f), (900.0f / 2.0f), 0.1f, 1000.0f),
+            view_3d(glm::radians(120.0f), 1600.0f / 900.0f, 0.1f, 1000.0f)
         {
 
         }
@@ -41,15 +41,10 @@ namespace scenes{
             sprite_texture.load(sprite_image);
             // set the texture on sprite
             example_sprite.set_texture(sprite_texture);
-            // set sprite scale
-            example_sprite.m_scale = core::Vector3f(
-                example_sprite.m_scale.x / 32, example_sprite.m_scale.y / 32, 1
-            );
-
-            // create a view that contains a projection and view matrices
+            
             example_sprite.m_position = core::Vector3f(0,0,0);
             view_2d.m_position = core::Vector3f(0,0,-100);
-            view_3d.m_position = core::Vector3f(0,0,-100);
+            view_3d.m_position = core::Vector3f(0,0,-1000);
         }
 
         // Executed on client handle event
@@ -72,7 +67,7 @@ namespace scenes{
         // Executed on logic update
         void update(float delta){
             // rotate the sprite
-            example_sprite.rotate(4.0f * delta, core::Vector3f(1,0,0));
+            //example_sprite.rotate(4.0f * delta, core::Vector3f(1,0,0));
 
             if (is_2d){
 
@@ -86,7 +81,7 @@ namespace scenes{
             else{
                 if (view_3d.distance_to(example_sprite) > 2.0f ){
                     // move forward
-                    view_3d.translate(core::Vector3f(0,0,1) * delta * 2.0f);
+                    view_3d.translate(core::Vector3f(0,0,1) * delta * 100.0f);
                 }
 
                 view_3d.set_active();

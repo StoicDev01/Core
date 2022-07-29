@@ -4,6 +4,7 @@
 #include "core/core.h"
 
 #include "example_scene.h"
+#include "test_scene.h"
 #include "gameObject.h"
 
 // Get GameObject Singleton
@@ -13,9 +14,6 @@ GameObject& gameObject = GameObject::Get();
 
 // logic thread
 void logic(core::graphics::Window& window){
-    fmt::print("TWO");
-    endl();
-
     std::clock_t end = 0;
 
     while (window.is_open()){
@@ -67,11 +65,8 @@ int main() {
     // Create opengl and imgui context, and init glew
     window.create_context(); 
 
-    fmt::print("ONE");
-    endl();
-
     // Create a new Scene
-    scenes::ExampleScene test_scene = scenes::ExampleScene(window);
+    scenes::ExampleScene test_scene(window);
     gameObject.set_current_scene(&test_scene);
 
     // execute logic and client

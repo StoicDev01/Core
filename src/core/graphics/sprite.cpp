@@ -5,7 +5,7 @@ namespace core::graphics {
     Sprite::Sprite()
     {
         // SHAPE and Texture
-        m_shape = Rectangle();
+        m_shape = core::RectangleData();
         m_texture = nullptr;
 
         // SHADER
