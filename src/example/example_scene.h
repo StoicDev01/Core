@@ -14,6 +14,8 @@ namespace scenes{
         public:
         core::graphics::Sprite example_sprite;
         core::graphics::Texture sprite_texture;
+        core::Shape m_shape;
+
 
         core::graphics::View2D view_2d;
         core::graphics::View3D view_3d;
@@ -67,8 +69,7 @@ namespace scenes{
         // Executed on logic update
         void update(float delta){
             // rotate the sprite
-            //example_sprite.rotate(4.0f * delta, core::Vector3f(1,0,0));
-
+            example_sprite.rotate(4.0f * delta, core::Vector3f(1,0,0));
             if (is_2d){
 
                 if (view_2d.distance_to(example_sprite) > 2.0f ){

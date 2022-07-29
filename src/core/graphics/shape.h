@@ -12,6 +12,8 @@
 #include "../system/data.h"
 
 namespace core {
+
+    // Represents a data of a shape
     class ShapeData{
         public:
 
@@ -37,20 +39,20 @@ namespace core {
         void create_objects();
     };
 
-    class RectangleData : public ShapeData{
-        public:
-        RectangleData();
-    };
+    // list of shape data's
+    namespace shapedata{
+        class Rectangle : public ShapeData{
+            public:
+            Rectangle();
+        };
+    }
 
-    class SquareData : public ShapeData{
-        public:
-        SquareData();
-    };
 }
 
 namespace core {
 
     // Main shape class
+    // represents a object with a shape data
     class Shape : public core::Transform{
         public:
 
@@ -58,14 +60,17 @@ namespace core {
         Shape(ShapeData shape_data);
 
         void create_from(ShapeData shape_data, bool has_shader = true);
+        
         void draw();
 
         protected:
-        ShapeData m_shape_data;
         graphics::Texture* m_texture;
+        ShapeData m_shape_data;
 
         core::gl::ShaderProgram m_shader_program;
         core::gl::Shader m_vertex_shader;
         core::gl::Shader m_fragment_shader;
     };
+
+
 }

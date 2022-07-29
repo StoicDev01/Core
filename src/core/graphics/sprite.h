@@ -12,20 +12,13 @@
 
 namespace core::graphics{
 
-    class Sprite : public Transform{
+    class Sprite : public core::Shape{
         public:
 
         Sprite();
 
         void set_texture(Texture& p_texture);
+        Texture* get_texture();
         void draw();
-        
-        protected:
-        core::ShapeData m_shape;
-        Texture* m_texture;
-
-        core::gl::ShaderProgram m_shader_program;
-        core::gl::Shader m_vertex_shader;
-        core::gl::Shader m_fragment_shader;
     };
 }

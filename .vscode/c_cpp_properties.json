@@ -34,6 +34,7 @@
             "intelliSenseMode": "linux-gcc-x86",
             "configurationProvider": "ms-vscode.makefile-tools",
             "compilerArgs": []
+            
         },
         {
             "name": "Windows-to-windows",

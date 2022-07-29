@@ -23,72 +23,40 @@ namespace core{
         m_element_buffer  = std::make_shared<core::gl::VertexBuffer>(GL_ELEMENT_ARRAY_BUFFER);
     }
 
-    // RECTANGLE
-    RectangleData::RectangleData()
-    {
-        create_objects();
+    namespace shapedata{
+        // RECTANGLE
+        Rectangle::Rectangle()
+        {
+            create_objects();
 
 
-        float vertex_buffer_data[] {
-            // Vertices           // texture coords
-            0.5f,  0.5f,  0.0f,  1.0f, 1.0f,    // top right
-            0.5f, -0.5f,  0.0f,  1.0f, 0.0f,    // bot right
-            -0.5f, -0.5f,  0.0f,  0.0f, 0.0f,    // bot left
-            -0.5f,  0.5f,  0.0f,  0.0f, 1.0f     // top left
-        };
+            float vertex_buffer_data[] {
+                // Vertices           // texture coords
+                0.5f,  0.5f,  0.0f,  1.0f, 1.0f,    // top right
+                0.5f, -0.5f,  0.0f,  1.0f, 0.0f,    // bot right
+                -0.5f, -0.5f,  0.0f,  0.0f, 0.0f,    // bot left
+                -0.5f,  0.5f,  0.0f,  0.0f, 1.0f     // top left
+            };
 
-        uint32_t element_buffer_data[] {
-            0, 1, 3,
-            1, 2, 3
-        };
+            uint32_t element_buffer_data[] {
+                0, 1, 3,
+                1, 2, 3
+            };
 
-        m_vertex_count = sizeof(vertex_buffer_data) / sizeof(float);
-        m_element_count = sizeof(element_buffer_data) / sizeof(uint32_t);
+            m_vertex_count = sizeof(vertex_buffer_data) / sizeof(float);
+            m_element_count = sizeof(element_buffer_data) / sizeof(uint32_t);
 
-        m_vertex_array->bind();
-        m_vertex_buffer->set_data(vertex_buffer_data, sizeof(vertex_buffer_data), GL_STATIC_DRAW);
-        m_element_buffer->set_data(element_buffer_data, sizeof(element_buffer_data), GL_STATIC_DRAW);
+            m_vertex_array->bind();
+            m_vertex_buffer->set_data(vertex_buffer_data, sizeof(vertex_buffer_data), GL_STATIC_DRAW);
+            m_element_buffer->set_data(element_buffer_data, sizeof(element_buffer_data), GL_STATIC_DRAW);
 
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
-        glEnableVertexAttribArray(0);
+            glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
+            glEnableVertexAttribArray(0);
 
-        glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
-        glEnableVertexAttribArray(1);
-        m_vertex_array->unbind();
-    }
-
-    // SQUARE
-    SquareData::SquareData()
-    {
-        create_objects();
-
-
-        float vertex_buffer_data[] {
-            // Vertices           // texture coords
-            1.0f, 1.0f,  0.0f,  1.0f, 1.0f,    // top right
-            1.0f, 0.0f,  0.0f,  1.0f, 0.0f,    // bot right
-            0.0f, 0.0f,  0.0f,  0.0f, 0.0f,    // bot left
-            0.0f, 1.0f,  0.0f,  0.0f, 1.0f     // top left
-        };
-
-        uint32_t element_buffer_data[] {
-            0, 1, 3,
-            1, 2, 3
-        };
-
-        m_vertex_count = sizeof(vertex_buffer_data) / sizeof(float);
-        m_element_count = sizeof(element_buffer_data) / sizeof(uint32_t);
-
-        m_vertex_array->bind();
-        m_vertex_buffer->set_data(vertex_buffer_data, sizeof(vertex_buffer_data), GL_STATIC_DRAW);
-        m_element_buffer->set_data(element_buffer_data, sizeof(element_buffer_data), GL_STATIC_DRAW);
-
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
-        glEnableVertexAttribArray(0);
-
-        glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
-        glEnableVertexAttribArray(1);
-        m_vertex_array->unbind();
+            glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
+            glEnableVertexAttribArray(1);
+            m_vertex_array->unbind();
+        }
     }
 
     Shape::Shape(){
@@ -103,8 +71,8 @@ namespace core{
         m_texture = nullptr;
 
         // SHADER
-        m_vertex_shader.create(std::filesystem::path("./data/shaders/sprite.vert"), GL_VERTEX_SHADER);
-        m_fragment_shader.create(std::filesystem::path("./data/shaders/sprite.frag"), GL_FRAGMENT_SHADER);
+        m_vertex_shader.create(std::filesystem::path("data/shaders/sprite.vert"), GL_VERTEX_SHADER);
+        m_fragment_shader.create(std::filesystem::path("data/shaders/sprite.frag"), GL_FRAGMENT_SHADER);
 
         m_vertex_shader.compile();
         m_fragment_shader.compile();
