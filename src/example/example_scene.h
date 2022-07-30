@@ -41,7 +41,7 @@ namespace scenes{
             sprite_texture.load(sprite_image);
             // set the texture on sprite
             example_sprite.set_texture(sprite_texture);
-
+    
             example_sprite.m_color = core::graphics::Color(235, 177, 70, 255);
             example_sprite.m_position = core::Vector3f(0,0,0);
             view_2d.m_position = core::Vector3f(0,0,-100);

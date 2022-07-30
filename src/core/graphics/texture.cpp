@@ -19,7 +19,20 @@ namespace core::graphics{
 
     void Texture::load(Image& image){
         bind();
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image.m_size.x, image.m_size.y, 0, GL_RGB, GL_UNSIGNED_BYTE, image.get_data());
+
+        if (image.m_color_channels == 4){
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, image.m_size.x, image.m_size.y, 0, GL_RGBA, GL_UNSIGNED_BYTE, image.get_data());
+        }
+        else if (image.m_color_channels == 3){
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image.m_size.x, image.m_size.y, 0, GL_RGB, GL_UNSIGNED_BYTE, image.get_data());
+        }
+        else if (image.m_color_channels == 2){
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_RG, image.m_size.x, image.m_size.y, 0, GL_RG, GL_UNSIGNED_BYTE, image.get_data());
+        }
+        else if (image.m_color_channels == 1){
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_R, image.m_size.x, image.m_size.y, 0, GL_R, GL_UNSIGNED_BYTE, image.get_data());
+        }
+
         glGenerateMipmap(GL_TEXTURE_2D);
         m_loaded = true;
         m_size = image.m_size;

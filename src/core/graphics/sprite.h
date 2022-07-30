@@ -17,8 +17,8 @@ namespace core::graphics{
 
         Sprite();
 
-        void set_texture(Texture& p_texture);
         Texture* get_texture();
+        void set_texture(Texture& p_texture);
         void draw();
     };
 }

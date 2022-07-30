@@ -27,5 +27,4 @@ namespace core::graphics {
         core::Vector2u m_size;
 
     };
-
 }

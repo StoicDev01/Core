@@ -33,6 +33,8 @@ namespace core::graphics{
         void destroy_imgui_context();
         void destroy_context();
 
+        GLFWwindow* get_glfw_window();
+
         // Called before draw
         void new_frame();
         // called after draw
@@ -41,22 +43,25 @@ namespace core::graphics{
         void clear(Color color = Color::white());
         void close();
 
+        Vector2u get_size();
         bool is_open();
         void resize(int width, int height);
 
-        GLFWwindow* get_glfw_window();
+        void handle_imgui(core::Event event);
 
-        Vector2u get_size();
         core::Vector2f get_mouse_pos();
         core::Vector2f screen_to_world_pos(core::Vector2f screen_pos);
+        
+        inline void track(){
+            gleqTrackWindow(m_glfw_window);
+        }
 
         inline int poll_event(core::Event& event){
-            gleqTrackWindow(m_glfw_window);
+            //gleqTrackWindow(m_glfw_window);
             return gleqNextEvent(&event);
         }
 
         private:
-        
         static void glfw_error_callback(int error, const char* description);
         static void GLAPIENTRY opengl_message_callback( 
             GLenum source,
