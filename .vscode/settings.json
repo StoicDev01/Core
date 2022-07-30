@@ -70,7 +70,8 @@
         "variant": "cpp",
         "set": "cpp",
         "filesystem": "cpp",
-        "any": "cpp"
+        "any": "cpp",
+        "unordered_set": "cpp"
     },
     "C_Cpp.intelliSenseEngineFallback": "Disabled",
     "mesonbuild.configureOnOpen": true,

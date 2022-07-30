@@ -3,6 +3,7 @@
 #include <memory.h>
 #include "../gl/gl_wrapper.h"
 #include "texture.h"
+#include "image.h"
 
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
@@ -45,6 +46,11 @@ namespace core {
             public:
             Rectangle();
         };
+
+        class Circle : public ShapeData{
+            public:
+            Circle();
+        };
     }
 
 }
@@ -59,9 +65,11 @@ namespace core {
         Shape();
         Shape(ShapeData shape_data);
 
-        void create_from(ShapeData shape_data, bool has_shader = true);
-        
+        void set_shapedata(ShapeData shape_data);
+        void setup_shaders();
         void draw();
+
+        graphics::Color m_color = graphics::Color(255,255,255,255);
 
         protected:
         graphics::Texture* m_texture;
@@ -72,5 +80,28 @@ namespace core {
         core::gl::Shader m_fragment_shader;
     };
 
+    namespace shapes{
 
+        class Rectangle : public Shape{
+            public:
+            Rectangle();
+        };
+
+        class Circle : public Shape{
+            public:
+            Circle(float radius);
+            Circle();
+
+            void draw();
+            void setup_shaders();
+            void set_radius(float radius);
+            
+            float m_thickness = 1.0f;
+            float m_smoothness = 0.01;
+            bool keep_aspect = false;
+
+            protected:
+        };
+
+    };
 }

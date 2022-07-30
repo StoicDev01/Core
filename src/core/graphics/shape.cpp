@@ -63,14 +63,16 @@ namespace core{
     }
 
     Shape::Shape(ShapeData shape_data){
-        create_from(shape_data);
+        set_shapedata(shape_data);
+        setup_shaders();
     }
-
-    void Shape::create_from(ShapeData shape_data, bool has_shader){
+    void Shape::set_shapedata(ShapeData shape_data){
         m_shape_data = shape_data;
         m_texture = nullptr;
+    }
 
-        // SHADER
+    void Shape::setup_shaders(){
+        // Setup base shader
         m_vertex_shader.create(std::filesystem::path("data/shaders/sprite.vert"), GL_VERTEX_SHADER);
         m_fragment_shader.create(std::filesystem::path("data/shaders/sprite.frag"), GL_FRAGMENT_SHADER);
 
@@ -91,6 +93,10 @@ namespace core{
         core::Matrix4f& projection_matrix = core::projection_matrix;
 
         // pass uniforms
+        int color = glGetUniformLocation(m_shader_program.get_id(), "mult_color");
+        core::Vector4f gl_color = m_color.to_glcolor();
+        glUniform4f(color, gl_color.x, gl_color.y, gl_color.z, gl_color.w);
+    
         glActiveTexture(GL_TEXTURE0);
         int texture_id = glGetUniformLocation(m_shader_program.get_id(), "texture_");
         glUniform1i(texture_id, 0);
@@ -114,5 +120,60 @@ namespace core{
 
         if (m_texture)
             m_texture->unbind();
+    }   
+
+    namespace shapes{
+
+        Rectangle::Rectangle(){
+            set_shapedata(core::shapedata::Rectangle());
+            setup_shaders();
+        };
+
+        Circle::Circle(){
+            set_shapedata(core::shapedata::Rectangle());
+            setup_shaders();
+        }
+
+        Circle::Circle(float radius){
+            set_radius(radius);
+            set_shapedata(core::shapedata::Rectangle());
+            setup_shaders();
+        }
+
+        void Circle::set_radius(float radius){
+            m_scale = core::Vector3f(radius, radius, 1.0);
+        }
+
+        void Circle::setup_shaders(){
+            m_vertex_shader.create(std::filesystem::path("data/shaders/sprite.vert"), GL_VERTEX_SHADER);
+            m_fragment_shader.create(std::filesystem::path("data/shaders/circle.frag"), GL_FRAGMENT_SHADER);
+
+            m_vertex_shader.compile();
+            m_fragment_shader.compile();
+            
+            m_shader_program.attach(m_vertex_shader);
+            m_shader_program.attach(m_fragment_shader);
+
+            m_shader_program.link();
+        }
+
+        // override draw to pass new unfirms to shader
+        void Circle::draw(){
+            m_shader_program.use();
+
+            int keep_aspect=  glGetUniformLocation(m_shader_program.get_id(), "keep_aspect");
+            glUniform1i(keep_aspect, (int)keep_aspect);
+
+            int scale = glGetUniformLocation(m_shader_program.get_id(), "scale");
+            glUniform3f(scale, m_scale.x, m_scale.y, m_scale.z);
+
+            int smoothness = glGetUniformLocation(m_shader_program.get_id(), "smoothness");
+            glUniform1f(smoothness, m_smoothness);
+
+            int thickness = glGetUniformLocation(m_shader_program.get_id(), "thickness");
+            glUniform1f(thickness, m_thickness);
+
+            Shape::draw();
+        };
     }
 }

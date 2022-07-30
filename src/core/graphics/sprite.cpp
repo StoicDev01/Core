@@ -5,7 +5,7 @@ namespace core::graphics {
     Sprite::Sprite()
     {
         // SHAPE and Texture
-        create_from(core::shapedata::Rectangle());
+        set_shapedata(core::shapedata::Rectangle());
         m_texture = nullptr;
     }
 

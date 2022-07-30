@@ -12,7 +12,7 @@
 
 namespace core::graphics{
 
-    class Sprite : public core::Shape{
+    class Sprite : public core::shapes::Rectangle{
         public:
 
         Sprite();

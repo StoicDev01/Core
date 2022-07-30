@@ -31,7 +31,10 @@ namespace core::graphics {
 
         Color(uint8_t p_r, uint8_t p_g, uint8_t p_b, uint8_t p_a);
         Color();
-        
+
+        core::Vector4f to_glcolor();
+        void from_glcolor(core::Vector4f gl_color);
+
         uint8_t r;
         uint8_t g;
         uint8_t b;

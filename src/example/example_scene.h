@@ -12,10 +12,9 @@
 namespace scenes{
     class ExampleScene : public core::Scene{
         public:
-        core::graphics::Sprite example_sprite;
+        //core::graphics::Sprite example_sprite;
         core::graphics::Texture sprite_texture;
-        core::Shape m_shape;
-
+        core::graphics::Sprite example_sprite;
 
         core::graphics::View2D view_2d;
         core::graphics::View3D view_3d;
@@ -43,10 +42,14 @@ namespace scenes{
             sprite_texture.load(sprite_image);
             // set the texture on sprite
             example_sprite.set_texture(sprite_texture);
-            
-            example_sprite.m_position = core::Vector3f(0,0,0);
+            example_sprite.m_color = core::graphics::Color(235, 177, 70, 255);
+            //example_sprite.m_position = core::Vector3f(0,0,0);
             view_2d.m_position = core::Vector3f(0,0,-100);
             view_3d.m_position = core::Vector3f(0,0,-1000);
+
+            // Enable blending
+            glEnable(GL_BLEND);
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         }
 
         // Executed on client handle event
@@ -69,7 +72,9 @@ namespace scenes{
         // Executed on logic update
         void update(float delta){
             // rotate the sprite
-            example_sprite.rotate(4.0f * delta, core::Vector3f(1,0,0));
+            example_sprite.rotate(glm::radians(120.0f) * delta, core::Vector3f(1.0,0.0,0.0));
+
+            //example_sprite.rotate(4.0f * delta, core::Vector3f(1,0,0));
             if (is_2d){
 
                 if (view_2d.distance_to(example_sprite) > 2.0f ){
@@ -91,7 +96,7 @@ namespace scenes{
 
         // Executed on client update draw
         void draw(core::graphics::Window& window){
-            window.clear();
+            window.clear(core::graphics::Color(255,255,255,255));
             // Draw Sprite
             example_sprite.draw();
         }

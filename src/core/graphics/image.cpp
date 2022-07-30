@@ -21,6 +21,22 @@ namespace core::graphics{
     
     Color::Color(){}
 
+    core::Vector4f Color::to_glcolor(){
+        return core::Vector4f(
+            (float)r / 255.0f, 
+            (float)g / 255.0f, 
+            (float)b / 255.0f, 
+            (float)a / 255.0f
+        ); 
+    }
+
+    void Color::from_glcolor(core::Vector4f gl_color){
+        r = uint8_t(gl_color.x * 255); 
+        g = uint8_t(gl_color.y * 255);
+        b = uint8_t(gl_color.z * 255);
+        a = uint8_t(gl_color.w * 255);
+    }
+
     // IMAGE
     Image::Image(Vector2u size , Color fill_color){
         m_color_channels = 4;

@@ -12,7 +12,7 @@ namespace scenes{
             view2d(-(4.0f / 2.0f), (4.0f / 2.0f), (3.0f / 2.0f), -(3.0f / 2.0f), -1000.0f, 1000.0f)
         {
 
-            shape.create_from(core::SquareData());
+            shape.set_shapedata(core::shapedata::Rectangle());
         }
 
         void init(){
