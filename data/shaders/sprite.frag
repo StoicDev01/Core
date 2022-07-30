@@ -8,6 +8,9 @@ uniform sampler2D texture_;
 
 void main(){
     color = mult_color;
-    color *= texture(texture_, tex_coord);
-    //color = vec4(1,0,0,1);
+
+    //if texture is valid
+    if (textureSize(texture_, 0) != vec2(1,1)){
+        color *= texture(texture_, tex_coord);
+    }
 }

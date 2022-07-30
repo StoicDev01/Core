@@ -15,8 +15,6 @@ void main()
     vec2 uv = (tex_coord - 0.5) * 2;
     float aspect = scale.x / scale.y;
 
-
-
     if (keep_aspect){
         uv.x *= aspect;
     }
@@ -24,5 +22,11 @@ void main()
     float distance = 1.0 - length(uv);
     color = vec4(smoothstep(0.0, smoothness, distance));
     color *= vec4(smoothstep(thickness + smoothness , thickness, distance));
+
+    // verify if texture is valid
+    if (textureSize(texture_, 0) != vec2(1,1)){
+        color *= texture(texture_, tex_coord);
+    }
+    
     color *= mult_color;
 }

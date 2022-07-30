@@ -85,6 +85,10 @@ namespace core{
         m_shader_program.link();
     }
 
+    void Shape::set_texture(core::graphics::Texture& texture){
+        m_texture = &texture;
+    }
+
     void Shape::draw(){
         // use shader program
         m_shader_program.use();
@@ -96,8 +100,12 @@ namespace core{
         int color = glGetUniformLocation(m_shader_program.get_id(), "mult_color");
         core::Vector4f gl_color = m_color.to_glcolor();
         glUniform4f(color, gl_color.x, gl_color.y, gl_color.z, gl_color.w);
-    
-        glActiveTexture(GL_TEXTURE0);
+
+        if (m_texture){
+            m_texture->bind();
+            glActiveTexture(GL_TEXTURE0);
+        }
+
         int texture_id = glGetUniformLocation(m_shader_program.get_id(), "texture_");
         glUniform1i(texture_id, 0);
 
@@ -110,8 +118,7 @@ namespace core{
         unsigned int projectionLoc = glGetUniformLocation(m_shader_program.get_id(), "projection");
         glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection_matrix));
 
-        if (m_texture)
-            m_texture->bind();
+
 
         m_shape_data.bind();
 

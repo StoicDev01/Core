@@ -71,6 +71,8 @@ namespace core {
 
         graphics::Color m_color = graphics::Color(255,255,255,255);
 
+        void set_texture(graphics::Texture& texture);
+
         protected:
         graphics::Texture* m_texture;
         ShapeData m_shape_data;

@@ -23,6 +23,7 @@ namespace core::graphics{
         glGenerateMipmap(GL_TEXTURE_2D);
         m_loaded = true;
         m_size = image.m_size;
+        unbind();
     }
 
     core::Vector2u Texture::get_size(){
