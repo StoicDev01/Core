@@ -50,7 +50,7 @@ namespace core::graphics{
         core::Vector2f get_mouse_pos();
         core::Vector2f screen_to_world_pos(core::Vector2f screen_pos);
 
-        bool want_capture_imgui(core::Event event);
+        bool imgui_want_capture(core::Event event);
         
         inline void track(){
             gleqTrackWindow(m_glfw_window);

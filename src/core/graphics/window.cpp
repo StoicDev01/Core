@@ -190,7 +190,7 @@ namespace core::graphics{
         endl();
     }
 
-    bool Window::want_capture_imgui(core::Event event){
+    bool Window::imgui_want_capture(core::Event event){
         ImGuiIO& io = ImGui::GetIO();
         if (event.type == GLEQ_BUTTON_PRESSED or event.type == GLEQ_BUTTON_RELEASED){
             if (io.WantCaptureMouse){
@@ -198,10 +198,11 @@ namespace core::graphics{
             }
         }
 
-        if (event.type == GLEQ_KEY_PRESSED or event.type == GLEQ_BUTTON_RELEASED){
+        if (event.type == GLEQ_KEY_PRESSED or event.type == GLEQ_KEY_RELEASED){
             if (io.WantCaptureKeyboard){
                 return true;
             }
         }
+        return false;
     }
 }
