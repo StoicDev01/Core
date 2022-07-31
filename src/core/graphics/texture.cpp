@@ -18,7 +18,18 @@ namespace core::graphics{
     }
 
     void Texture::load(Image& image){
+        // on load again
+        if (m_loaded){
+            // delete texture and create a new
+            glDeleteTextures(1, &m_id);
+            glGenTextures(1, &m_id);
+            m_loaded = false;
+        }
+
         bind();
+
+        glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST );
+
 
         if (image.m_color_channels == 4){
             glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, image.m_size.x, image.m_size.y, 0, GL_RGBA, GL_UNSIGNED_BYTE, image.get_data());

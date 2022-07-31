@@ -47,8 +47,6 @@ namespace core::graphics{
         bool is_open();
         void resize(int width, int height);
 
-        void handle_imgui(core::Event event);
-
         core::Vector2f get_mouse_pos();
         core::Vector2f screen_to_world_pos(core::Vector2f screen_pos);
         

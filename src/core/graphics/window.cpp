@@ -189,43 +189,4 @@ namespace core::graphics{
 
         endl();
     }
-
-    void Window::handle_imgui(core::Event event){
-        ImGuiIO& io = ImGui::GetIO();
-        switch (event.type)
-        {
-            case GLEQ_SCROLLED:
-            {
-                if (event.scroll.x > 0) io.MouseWheelH += 1;
-                if (event.scroll.x < 0) io.MouseWheelH -= 1;
-                if (event.scroll.y > 0) io.MouseWheel += 1;
-                if (event.scroll.y < 0) io.MouseWheel -= 1;
-            }
-            case GLEQ_BUTTON_PRESSED:
-            {
-                if (event.mouse.button == 0) io.MouseDown[0] = true;
-                if (event.mouse.button == 1) io.MouseDown[1] = true;
-                if (event.mouse.button == 2) io.MouseDown[2] = true;
-            }
-            case GLEQ_CODEPOINT_INPUT:
-            {
-                //io.AddInputCharactersUTF8(event->codepoint);
-                io.AddInputCharacter(event.codepoint);
-            }
-            case GLEQ_KEY_PRESSED:
-            case GLEQ_KEY_RELEASED:
-            {
-                //std::cout << (event->keyboard.mods) << std::endl;
-                int key = event.keyboard.key;
-                IM_ASSERT(key >= 0 && key < IM_ARRAYSIZE(io.KeysDown));
-
-                io.KeysDown[key] = (event.type == GLEQ_KEY_PRESSED);
-
-                io.KeyShift = (event.keyboard.mods == 1);
-                io.KeyCtrl  = (event.keyboard.mods == 2);
-                io.KeyAlt   = (event.keyboard.mods == 4);
-                io.KeySuper = (event.keyboard.mods == 8);
-            }
-        }
-    }
 }

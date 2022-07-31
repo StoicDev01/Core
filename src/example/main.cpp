@@ -47,7 +47,6 @@ void client(core::graphics::Window& window){
         // handle event
         while (window.poll_event(event)){
             current_scene->handle_event(event); 
-            
             core::free_event(event);
         }
 
