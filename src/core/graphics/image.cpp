@@ -38,6 +38,12 @@ namespace core::graphics{
     }
 
     // IMAGE
+    Image::Image(core::Vector2u size, int color_channels, unsigned char* data){
+        m_color_channels = color_channels;
+        m_data = data;
+        m_size = size;
+    }
+
     Image::Image(Vector2u size , Color fill_color){
         m_color_channels = 4;
         // create data
@@ -83,8 +89,7 @@ namespace core::graphics{
     // FIX ME: allow other image formats
     void Image::save(std::filesystem::path p_path){
         stbi_flip_vertically_on_write(true);
-        //stbi_write_png_to_func()
-        //stbi_write_png(p_path.c_str(), m_size.x, m_size.y, m_color_channels, m_data, m_size.x * m_color_channels);
+        stbi_write_png((const char *)p_path.u8string().c_str(), m_size.x, m_size.y, m_color_channels, m_data, m_size.x * m_color_channels);
     }
 
     void Image::set_pixel(core::Vector2u pixel_pos, Color color){

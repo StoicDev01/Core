@@ -118,8 +118,6 @@ namespace core{
         unsigned int projectionLoc = glGetUniformLocation(m_shader_program.get_id(), "projection");
         glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection_matrix));
 
-
-
         m_shape_data.bind();
 
         glDrawElements(GL_TRIANGLES, m_shape_data.get_element_count(), GL_UNSIGNED_INT, 0);

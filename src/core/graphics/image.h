@@ -43,6 +43,7 @@ namespace core::graphics {
 
     class Image {
         public:
+        Image(core::Vector2u size , int color_channels, unsigned char* data);
         Image(core::Vector2u size , Color fill_color = Color::black());
         Image(std::filesystem::path path);
         ~Image();

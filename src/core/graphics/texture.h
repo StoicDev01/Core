@@ -19,12 +19,14 @@ namespace core::graphics {
         void unbind();
 
         void load(Image& image);
+
+        Image get_image();
         
         core::Vector2u get_size();
 
         protected:
+        int m_color_channels;
         bool m_loaded = false;
         core::Vector2u m_size;
-
     };
 }
