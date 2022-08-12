@@ -18,12 +18,16 @@ namespace core::graphics{
     class View2D : public View{ 
         public:
 
+        View2D();
         View2D(float left, float right, float bottom, float top, float near = 0.1f, float far = 100.0f);
+        void create(float left, float right, float bottom, float top, float near = 0.1f, float far = 100.0f);
     };
 
     class View3D : public View{
         public:
 
+        View3D();
         View3D(float fov_radians, float aspect_ratio, float near = 0.1f, float far = 100.0f);
+        void create(float fov_radians, float aspect_ratio, float near = 0.1f, float far = 100.0f);
     };
 }

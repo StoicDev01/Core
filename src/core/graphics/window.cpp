@@ -134,7 +134,7 @@ namespace core::graphics{
 
     Vector2u Window::get_size(){
         int width, height;
-        glfwGetWindowSize(m_glfw_window, &width, &height);
+        glfwGetFramebufferSize(m_glfw_window, &width, &height);
         Vector2u size((uint32_t)width, (uint32_t)height);
         return size;
     }
@@ -154,7 +154,7 @@ namespace core::graphics{
         core::Vector3f world_pos = glm::unProject(
             core::Vector3f(screen_pos, 0.0), 
             active_view, active_projection, 
-            core::Vector4f(0,0, get_size().x, get_size().y)
+            core::Vector4f(0,0, 1600, 900)
         );
 
         return core::Vector2f(world_pos);
