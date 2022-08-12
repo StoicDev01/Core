@@ -154,7 +154,7 @@ namespace core::graphics{
         core::Vector3f world_pos = glm::unProject(
             core::Vector3f(screen_pos, 0.0), 
             active_view, active_projection, 
-            core::Vector4f(0,0, 1600, 900)
+            core::Vector4f(0,0, window_size.x, window_size.y)
         );
 
         return core::Vector2f(world_pos);
