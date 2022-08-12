@@ -3,7 +3,8 @@
 
 #include "core/core.h"
 
-#include "example_scene.h"
+#include "example_sprite_scene.h"
+#include "example_geometry_scene.h"
 #include "test_scene.h"
 #include "gameObject.h"
 

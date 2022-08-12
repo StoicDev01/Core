@@ -44,6 +44,7 @@ namespace scenes{
     
             example_sprite.m_color = core::graphics::Color(235, 177, 70, 255);
             example_sprite.m_position = core::Vector3f(0,0,0);
+            
             view_2d.m_position = core::Vector3f(0,0,-100);
             view_3d.m_position = core::Vector3f(0,0,-1000);
 

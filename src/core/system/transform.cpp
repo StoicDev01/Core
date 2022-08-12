@@ -16,7 +16,7 @@ namespace core{
         Matrix4f rotation_matrix = glm::toMat4(m_rotation);
         Matrix4f scale_matrix    = glm::scale(m_scale);
 
-        return scale_matrix * rotation_matrix * translate_matrix;
+        return  translate_matrix * scale_matrix * rotation_matrix;
     }
 
     void Transform::rotate(float angle, Vector3f rotation){
