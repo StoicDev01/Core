@@ -150,13 +150,14 @@ namespace core::graphics{
         core::Matrix4f& active_view = core::view_matrix;
         core::Matrix4f& active_projection = core::projection_matrix;
 
-        float x = 2.0 * screen_pos.x / window_size.x - 1.0;
-        float y = -2.0 * screen_pos.y / window_size.y + 1.0;
+        screen_pos = core::Vector3f(screen_pos, 0);
+        core::Vector3f world_pos = glm::unProject(
+            core::Vector3f(screen_pos, 0.0), 
+            active_view, active_projection, 
+            core::Vector4f(0,0, get_size().x, get_size().y)
+        );
 
-        glm::mat4 view_projection_inverse = glm::inverse(active_projection * active_view);
-        glm::vec4 world_space_position(x, y, 0.0f, 1.0f);
-
-        return view_projection_inverse * world_space_position;
+        return core::Vector2f(world_pos);
     };
 
     void Window::glfw_error_callback(int error, const char* description){
