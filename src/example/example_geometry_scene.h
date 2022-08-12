@@ -31,7 +31,8 @@ namespace scenes{
 
             circle.m_color = core::graphics::Color::blue();
             circle.m_position = core::Vector3f(5,0,1);
-            circle.set_radius(5.0f);
+            circle.set_radius(20.0f);
+            circle.m_position = core::Vector3f(1600/2.0, 0, 1);
 
             view_2d.m_position = core::Vector3f(0,0,-2);
 
@@ -52,6 +53,7 @@ namespace scenes{
         void draw(core::graphics::Window& window){
             window.clear(core::graphics::Color(255,255,255,255));
             rectangle.draw();
+            circle.draw();
             //circle.draw();
             view_2d.set_active();
         }
