@@ -157,7 +157,8 @@ namespace core::graphics{
             core::Vector4f(0,0, window_size.x, window_size.y)
         );
 
-        return core::Vector2f(world_pos);
+        // Need to invert y
+        return core::Vector2f(world_pos.x , -world_pos.y);
     };
 
     void Window::glfw_error_callback(int error, const char* description){
