@@ -27,7 +27,7 @@ namespace scenes{
         // Executed on start
         void init(){
             rectangle.m_color = core::graphics::Color::red();
-            rectangle.m_position = core::Vector3f(0,0,-110);
+            rectangle.m_position = core::Vector3f(0,0,-99);
             rectangle.m_scale = core::Vector3f(50,50,1);
 
             circle.m_color = core::graphics::Color::blue();
