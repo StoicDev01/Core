@@ -29,6 +29,7 @@ namespace core::graphics{
     void Window::create_opengl_context(){
         glfwMakeContextCurrent(m_glfw_window);
         glfwSwapInterval(1); // Enable vsync
+        glEnable(GL_DEPTH_TEST);
     }
 
     void Window::init_glew(){
@@ -154,7 +155,7 @@ namespace core::graphics{
         core::Vector3f world_pos = glm::unProject(
             core::Vector3f(screen_pos, 0.0), 
             active_view, active_projection, 
-            core::Vector4f(0,0, window_size.x, window_size.y)
+            core::Vector4f(0,0, (float)window_size.x, (float)window_size.y)
         );
 
         // Need to invert y

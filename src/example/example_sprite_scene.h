@@ -73,7 +73,7 @@ namespace scenes{
         // Executed on logic update
         void update(float delta){
             // rotate the sprite
-            example_sprite.rotate(glm::radians(120.0f) * delta, core::Vector3f(1.0,0.0,0.0));
+            example_sprite.rotate( glm::radians(90.0f) * delta,core::Vector3f(1.0,0.0,0.0));
 
             //example_sprite.rotate(4.0f * delta, core::Vector3f(1,0,0));
             if (is_2d){

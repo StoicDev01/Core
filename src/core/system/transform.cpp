@@ -8,19 +8,19 @@ namespace core{
     {
         m_position = core::Vector3f(0,0,0);
         m_scale = core::Vector3f(1,1,1);
-        m_rotation = core::Vector3f(0,0,0);
+        m_rotation = glm::quat(core::Vector3f(0,0,0));
     }
 
     Matrix4f Transform::get_matrix() const{
         Matrix4f translate_matrix = glm::translate(m_position);
         Matrix4f rotation_matrix = glm::toMat4(m_rotation);
-        Matrix4f scale_matrix    = glm::scale(m_scale);
+        Matrix4f scale_matrix = glm::scale(m_scale);
 
-        return  translate_matrix * scale_matrix * rotation_matrix;
+        return  translate_matrix * rotation_matrix * scale_matrix;
     }
 
-    void Transform::rotate(float angle, Vector3f rotation){
-        m_rotation = glm::rotate(m_rotation, angle, rotation);
+    void Transform::rotate(float angle, Vector3f axis){
+        glm::rotate(m_rotation, angle, axis);
     }
 
     void Transform::translate(Vector3f direction){

@@ -66,7 +66,7 @@ int main() {
     window.create_context(); 
 
     // Create a new Scene
-    scenes::ExampleScene test_scene(window);
+    scenes::ExampleGeometry test_scene(window);
     gameObject.set_current_scene(&test_scene);
 
     // execute logic and client

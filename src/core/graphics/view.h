@@ -4,6 +4,8 @@
 #include "../system/transform.h"
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
+#include "fmt/format.h"
+#include "../system/core_utils.h"
 
 namespace core::graphics{
 
@@ -11,6 +13,8 @@ namespace core::graphics{
         public:
 
         void set_active();
+
+        Matrix4f get_matrix();
 
         Matrix4f m_projection_matrix;
     };

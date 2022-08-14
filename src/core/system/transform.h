@@ -50,7 +50,7 @@ namespace core{
 
         float distance_to(Transform& p_transform);
 
-        void rotate(float angle, Vector3f rotation);
+        void rotate(float angle, Vector3f axis);
         void translate(Vector3f direction);
 
         core::Matrix4f get_matrix() const;
@@ -59,5 +59,11 @@ namespace core{
         Vector3f m_scale;
         glm::quat m_rotation;
 
+        Vector3f m_world_up;
+        Vector3f m_up;
+        Vector3f m_front;
+        Vector3f m_right;
+
+        
     };
 }

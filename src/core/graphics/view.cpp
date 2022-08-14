@@ -4,7 +4,11 @@ namespace core::graphics{
 
     void View::set_active(){
         core::projection_matrix = m_projection_matrix;
-        core::view_matrix = get_matrix();
+        core::view_matrix = View::get_matrix();
+    }
+
+    Matrix4f View::get_matrix(){
+        return glm::inverse(Transform::get_matrix());
     }
 
     View2D::View2D(){
