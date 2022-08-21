@@ -13,7 +13,11 @@
 namespace scenes{
     class ExampleGeometry : public core::Scene{
         public:
-        core::shapes::Rectangle rectangle;
+        core::shapes::Rectangle up_rectangle;
+        core::shapes::Rectangle down_rectangle;
+        core::shapes::Rectangle right_rectangle;
+        core::shapes::Rectangle left_rectangle;
+
         core::shapes::Circle circle;
         core::graphics::View2D view_2d;
 
@@ -26,41 +30,30 @@ namespace scenes{
 
         // Executed on start
         void init(){
-            rectangle.m_color = core::graphics::Color::red();
-            rectangle.m_position = core::Vector3f(0,0,-99);
-            rectangle.m_scale = core::Vector3f(50,50,1);
+            up_rectangle.m_color = core::graphics::Color::red();
+            up_rectangle.m_position = core::Vector3f(0,25, 1);
+            up_rectangle.m_scale = core::Vector3f(50,50,1);
 
-            circle.m_color = core::graphics::Color::blue();
-            circle.set_radius(100.0f);
-            circle.m_position = core::Vector3f(0, 0, -100);
+            down_rectangle.m_color = core::graphics::Color::blue();
+            down_rectangle.m_position = core::Vector3f(0,-25, 1);
+            down_rectangle.m_scale = core::Vector3f(50,50,1);
+
+            right_rectangle.m_color = core::graphics::Color::black();
+            right_rectangle.m_position = core::Vector3f(50,0, 1);
+            right_rectangle.m_scale = core::Vector3f(50,50,1);
+
+            left_rectangle.m_color = core::graphics::Color::green();
+            left_rectangle.m_position = core::Vector3f(-50,0, 1);
+            left_rectangle.m_scale = core::Vector3f(50,50,1);
+
+            circle.m_position = core::Vector3f(0,0,1);
+            circle.m_color = core::graphics::Color::black();
+            circle.m_thickness = 0.2;
+            circle.set_radius(200.0f);
 
             view_2d.m_position = core::Vector3f(0,0,0);
-            
-            core::Vector3f rectangle_position;
-            core::Vector3f scale_position;
-            glm::quat rectangle_rotation;
-            core::Vector3f skew;
-            core::Vector4f perspective;
-
-            glm::decompose(rectangle.get_matrix(), scale_position, rectangle_rotation, rectangle_position, skew, perspective);
-            fmt::print("RECTANGLE POSITION: ({}, {}, {})", rectangle_position.x, rectangle_position.y, rectangle_position.z);
-            endl();
-
-            core::Vector3f view_position;
-            core::Vector3f view_scale;
-            glm::quat view_rotation;
-            core::Vector3f view_skew;
-            core::Vector4f view_perspective;
-
-            glm::decompose(view_2d.get_matrix(), view_scale, view_rotation, view_position, view_skew, view_perspective);
-            core::Vector3f view_rotation_euler = glm::eulerAngles(view_rotation);
-
-            fmt::print("VIEW POSITION: ({}, {}, {})", view_position.x, view_position.y, view_position.z);
-            endl();
-            fmt::print("VIEW SCALE: ({}, {}, {})", view_scale.x, view_scale.y, view_scale.z);
-            endl();
-            fmt::print("VIEW ROTATION: ({}, {}, {})", view_rotation_euler.x, view_rotation_euler.y, view_rotation_euler.z);
-            endl();
+            // Invert z scale so the view points towards positive Z axis
+            view_2d.m_scale = core::Vector3f(1,1,-1);
 
             // Enable blending
             glEnable(GL_BLEND);
@@ -79,10 +72,12 @@ namespace scenes{
         // Executed on client update draw
         void draw(core::graphics::Window& window){
             window.clear(core::graphics::Color(255,255,255,255));
+            up_rectangle.draw();
+            down_rectangle.draw();
+            right_rectangle.draw();
+            left_rectangle.draw();
             circle.draw();
-            rectangle.draw();
             view_2d.set_active();
         }
-
     };
 }

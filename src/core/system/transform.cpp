@@ -20,7 +20,7 @@ namespace core{
     }
 
     void Transform::rotate(float angle, Vector3f axis){
-        glm::rotate(m_rotation, angle, axis);
+        m_rotation = glm::quat(glm::rotate(m_rotation, angle, axis));
     }
 
     void Transform::translate(Vector3f direction){

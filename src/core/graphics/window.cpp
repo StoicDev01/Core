@@ -140,26 +140,43 @@ namespace core::graphics{
         return size;
     }
 
+    // get mouse position relative to window top left corner
     core::Vector2f Window::get_mouse_pos(){
         double x, y;
         glfwGetCursorPos(m_glfw_window, &x, &y);
         return core::Vector2f((float)x, (float)y);
     };
 
-    core::Vector2f Window::screen_to_world_pos(core::Vector2f screen_pos){ 
+    // get world position relative to position of the screen relative to top left corner
+    core::Vector2f Window::screen_to_world_pos(core::Vector2f screen_pos, bool top_left){ 
         core::Vector2u window_size = get_size();
         core::Matrix4f& active_view = core::view_matrix;
         core::Matrix4f& active_projection = core::projection_matrix;
 
-        screen_pos = core::Vector3f(screen_pos, 0);
-        core::Vector3f world_pos = glm::unProject(
-            core::Vector3f(screen_pos, 0.0), 
-            active_view, active_projection, 
-            core::Vector4f(0,0, (float)window_size.x, (float)window_size.y)
-        );
+        int window_size_x; int window_size_y;
+        int window_pos_x; int window_pos_y;
 
-        // Need to invert y
-        return core::Vector2f(world_pos.x , -world_pos.y);
+        glfwGetWindowPos(m_glfw_window, &window_pos_x, &window_pos_y);
+        glfwGetWindowSize(m_glfw_window, &window_size_x, &window_size_y);
+
+        core::Vector3f world_pos;
+
+        if (top_left){
+            world_pos = glm::unProject(
+                core::Vector3f(screen_pos.x, -screen_pos.y + window_size_y, 0.0),
+                active_view, active_projection, 
+                core::Vector4f(0, 0, (float)window_size_x, (float)window_size_y)
+            );
+        }
+        else{
+            world_pos = glm::unProject(
+                core::Vector3f(screen_pos.x, screen_pos.y, 0.0),
+                active_view, active_projection,
+                core::Vector4f(0,0, (float)window_size_x, (float)window_size_y)
+            );
+        }
+
+        return core::Vector2f(world_pos.x, world_pos.y);
     };
 
     void Window::glfw_error_callback(int error, const char* description){
