@@ -104,7 +104,7 @@ namespace core::graphics{
         pixel_offset[2] = color.b;
 
         if (m_color_channels == 4)
-            pixel_offset[4] = color.a;
+            pixel_offset[3] = color.a;
         
     }
 
